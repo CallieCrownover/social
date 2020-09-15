@@ -1,0 +1,42 @@
+
+.form-group {
+    display: inline-block;
+    background-color: rgb(177, 231, 29);
+    margin-top: 10px;
+    width: 300px;
+    height: 35px;
+};
+
+.App {
+    display: inline-block;
+    background-color: rgb(238, 113, 175);
+}
+
+.animate__animated {
+    display: inline-block;
+    background-color: rgb(114, 85, 216);
+    float: left;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 450px;
+    padding-top: 25px;
+}
+
+.signup-btn {
+    width: 200px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.login-btn {
+    width: 200px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+
