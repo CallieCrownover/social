@@ -1,0 +1,19 @@
+.auto-scroll {
+    float: right;
+    background-color: rgb(16, 153, 177);
+    margin-top: 120px;
+    margin-right: 50px;
+    width: 1300px;
+    height: 500px;
+    margin-right: 120px;
+}
+
+.image-auto-scroll {
+    width: 1150px;
+    height: 500px;
+}
+
+.scroll {
+    width: 50%;
+    float: right;
+}
