@@ -39,7 +39,7 @@ function handleFormSubmit(event) {
 
   return (
     
-    <div className="main align-top" className="animate__animated animate__zoomInUp animate__delay-1s">
+    <div className="main" className="animate__animated animate__zoomInUp animate__delay-1s">
       
       
      
