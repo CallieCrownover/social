@@ -7,7 +7,7 @@ import {
   Button,
 } from 'reactstrap';
 import API from "../../utils/API";
-import Jumbotron from "../Jumbotron";
+
 
 function LoginForm(props) {
 
@@ -39,19 +39,21 @@ function handleFormSubmit(event) {
 
   return (
     
-    <div className="main">
+    <div className="main align-top" className="animate__animated animate__zoomInUp animate__delay-1s">
       
-      <div className="form-group"  
-      className="animate__animated animate__zoomInUp animate__delay-1s">
+      
+     
     <Container className="App">
       <Form className="form">
       <h2>Sign Up</h2>
       <Col>
           <FormGroup>
-            <Label className="future-sign-up">Sign up with Facebook (coming soon)</Label>
+            
+              <img className="sign-in-image" src="https://lh3.googleusercontent.com/proxy/3AcmUBI5n3Fy_IUQpdplEA91hNwp7KOktkvpQimAMVhmZubdsEFYyB2_4v72likeY7qetoayJ2PkM6bUG3VCFWZljU5Wg7SPKuOBUhGp4vFtFKRNd28T7Q0i5nCtlR2Q-9YNpmyTCoxB4T5yvhuwfKtOMTOZXwA8"></img>
+            
             </FormGroup>
             <FormGroup>
-            <Label className="future-sign-up">Sign up with Google (coming soon)</Label>
+            <img className="sign-in-image" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png"></img>
             </FormGroup>
         </Col>
         <p className="or">OR</p>
@@ -80,7 +82,7 @@ function handleFormSubmit(event) {
           </FormGroup>
         </Col>
 
-        <Button className="signup-btn"
+        <Button className="signup-btn" color="danger"
         disabled={!(formObject.username && formObject.email && formObject.password)}
         onClick={handleFormSubmit}
         >
@@ -112,14 +114,14 @@ function handleFormSubmit(event) {
             />
           </FormGroup>
         </Col>
-        <Button className="login-btn"
+        <Button className="login-btn" color="danger"
         disabled={!(formObject.username && formObject.email && formObject.password)}
         onClick={handleFormSubmit}
         >
           Log In</Button>
       </Form>
      </Container>
-     </div>
+     
      </div>
 
 
@@ -160,21 +162,7 @@ export default LoginForm;
 
 
 
-// The ...props means, spread all of the passed props onto this element
-// That way we don't have to define them all individually
-// function LoginForm(props) {
-//   return (
-//     <div className="form-div">
-//     <div className="form-group" class="animate__animated animate__zoomInUp animate__delay-12s">
-//       <span>
-//       <input className="form-control"/>
-//       </span>
-//     </div>
-//     </div>
-//   );
-// }
 
-// export default LoginForm;
 
 
 
