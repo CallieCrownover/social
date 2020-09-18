@@ -17,19 +17,19 @@ function LoginPage() {
   const [formObject, setFormObject] = useState({})
   const [scrollObject, setScrollObject] = useState({})
 
-   // Load all users and store them with setUsers
-  useEffect(() => {
-    loadUsers()
-  }, [])
+  //  // Load all users and store them with setUsers
+  // useEffect(() => {
+  //   loadUsers()
+  // }, [])
 
-   // Loads all users and sets them to users
-   function loadUsers() {
-    API.getBooks()
-      .then(res => 
-        setUsers(res.data)
-      )
-      .catch(err => console.log(err));
-  };
+  //  // Loads all users and sets them to users
+  //  function loadUsers() {
+  //   API.getBooks()
+  //     .then(res => 
+  //       setUsers(res.data)
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   // Deletes a user from the database with a given id, then reloads users from the db
   // function deleteUser(id) {
@@ -54,7 +54,7 @@ function LoginPage() {
         email: formObject.email,
         password: formObject.password
       })
-        .then(res => loadUsers())
+        // .then(res => loadUsers())
         .then(console.log(users))
         .catch(err => console.log(err));
     }

@@ -10,27 +10,35 @@ import {
   
   const style = { width: "18rem" };
   
-  function EventCard() {
+  function EventCard(props) {
     return (
       <>
         <Card style={style}>
           <CardImg
             alt="..."
-            src={"https://media.istockphoto.com/photos/bowling-picture-id480732472?k=6&m=480732472&s=612x612&w=0&h=5NOYSs5huZiVrj0FanxaB2feafYLKj2qzVyzEXqeydI="}
+            src={props.image}
             top
           ></CardImg>
           <CardBody>
-            <CardTitle>Card title</CardTitle>
+            <CardTitle>{props.name}</CardTitle>
             <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              {props.description}
+            </CardText>
+            <CardText>
+              {props.location}
+            </CardText>
+            <CardText>
+              {props.date}
+            </CardText>
+            <CardText>
+              {props.time}
             </CardText>
             <Button
               color="primary"
               href="#pablo"
               onClick={(e) => e.preventDefault()}
             >
-              Go somewhere
+              Sign Up!
             </Button>
           </CardBody>
         </Card>
