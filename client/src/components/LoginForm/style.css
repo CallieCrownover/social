@@ -1,9 +1,8 @@
-
 .form-group {
     display: inline-block;
     background-color: rgb(177, 231, 29);
     margin-top: 10px;
-    width: 300px;
+    width: 200px;
     height: 25px;
 }
 
@@ -15,17 +14,19 @@
     display: inline-block;
     background-color: rgb(127, 110, 190);
     float: left;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-left: 70px;
     margin-right: 100px;
     margin-bottom: 50px;
     width: 400px;
-    height: 700px;
+    height: 800px;
     padding-top: 25px;
 }
 
+
+
 .signup-btn {
-    width: 300px;
+    width: 200px;
     color: black;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -36,6 +37,11 @@
     color: black;
     margin-top: 20px;
     margin-bottom: 40px;
+}
+
+.sign-in-image {
+    width: 200px;
+    height: 35px;
 }
 
 

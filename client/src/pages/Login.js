@@ -6,11 +6,13 @@ import SocialJumbotron from "../components/Jumbotron";
 
 
 
+
 function LoginPage() {
 
   return(
   <div>
   <SocialJumbotron />
+  <ReactAutoScroll></ReactAutoScroll>
    <LoginForm />
    </div>
   
