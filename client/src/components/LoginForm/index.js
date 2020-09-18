@@ -1,6 +1,7 @@
 
 import "./style.css";
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom'
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
@@ -10,7 +11,7 @@ import API from "../../utils/API";
 
 
 function LoginForm(props) {
-
+  const history = useHistory()
   const [users, setUsers] = useState([])
   const [formObject, setFormObject] = useState({})
 
@@ -23,14 +24,16 @@ function LoginForm(props) {
 // Then reload users from the database
 function handleFormSubmit(event) {
   event.preventDefault();
-  if (formObject.username && formObject.email && formObject.password) {
+
+  if (formObject.email && formObject.password) {
     API.saveUser({
-      username: formObject.username,
       email: formObject.email,
       password: formObject.password
     })
-      // .then(res => loadUsers())
-      .then(console.log(users))
+      .then(() => {
+        console.log(history.push)
+        history.push('/Events')
+      })
       .catch(err => console.log(err));
   }
 };
@@ -83,7 +86,7 @@ function handleFormSubmit(event) {
         </Col>
 
         <Button className="signup-btn" color="danger"
-        disabled={!(formObject.username && formObject.email && formObject.password)}
+        disabled={!(formObject.email && formObject.password)}
         onClick={handleFormSubmit}
         >
           Sign Up</Button>
@@ -115,7 +118,7 @@ function handleFormSubmit(event) {
           </FormGroup>
         </Col>
         <Button className="login-btn" color="danger"
-        disabled={!(formObject.username && formObject.email && formObject.password)}
+        disabled={!(formObject.email && formObject.password)}
         onClick={handleFormSubmit}
         >
           Log In</Button>
