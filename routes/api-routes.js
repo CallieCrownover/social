@@ -1,24 +1,26 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const router = require('express').Router();
 
-module.exports = function (app) {
     // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
     // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
     // otherwise send back an error
-    app.post("/api/Login", (req, res) => {
+    router.post("/api/signup", (req, res) => {
+
         db.User.create({
             email: req.body.email,
             password: req.body.password
         })
             .then(() => {
-                res.redirect(307, "/api/Login");
+                //res.redirect(307, "/api/Login");
+                res.send('Signed up user!')
             })
             .catch(err => {
+                console.log(err)
                 res.status(401).json(err);
             });
     });
-
 
     // Route for logging user out
     // app.get("/logout", (req, res) => {
@@ -40,4 +42,4 @@ module.exports = function (app) {
     //       });
     //     }
     //   });
-};
+module.exports = router;

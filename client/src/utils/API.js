@@ -49,8 +49,12 @@ export default {
 
   getTestEvents: function(){
     return testEvents
+  },
+  saveUser: function(user) {
+    return axios.post("/api/signup", user)
   }
 }
+
 
 //   // Gets all books
 //   getBooks: function() {
