@@ -1,5 +1,5 @@
 const express = require("express");
-
+const passport = require("./config/passport");
 const mongoose = require("mongoose");
 
 //UNCOMMENT AFTER ROUTES  ARE CREATED
@@ -14,7 +14,9 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
+// using passport library
+app.use(passport.initialize());
+app.use(passport.session());
 
 //UNCOMMENT AFTER ROUTES ARE CREATED
 // app.use(routes);
