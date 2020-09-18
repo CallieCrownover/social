@@ -10,7 +10,6 @@ import MyEvents from "./pages/MyEvents";
 function App() {
   return (
     <Router>
-// events-page
       <div className="App">
       <Route exact path="/" component={Login} />
       <Route exact path="/events" component={Events} />
