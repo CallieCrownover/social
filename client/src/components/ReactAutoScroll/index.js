@@ -17,3 +17,26 @@ function ReactAutoScroll(props) {
 }
 
 export default ReactAutoScroll;
+
+
+
+
+{/* <ReactAutoScroll
+        targetPosition={900}
+        easeType={'linear'}
+        speed={5}
+        updateInterval={40}
+        onScrollingDone={() => console.log('scrolling finished')}
+        // scrollTargetRef={(scrollObject.refs.scrollExample)}
+        isEnabled
+      >
+      <div className="image-scroll"
+          ref="scrollExample"
+          style={{ overflow: 'scroll', backgroundColor: 'red', width: '300px', height: '300px' }}
+          >
+          <div style={{ height: '2000px' }}>
+            content
+          </div>
+      </div>
+     </ReactAutoScroll>
+     </div> */}

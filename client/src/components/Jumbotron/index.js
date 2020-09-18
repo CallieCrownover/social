@@ -9,6 +9,8 @@ const SocialJumbotron = (props) => {
         <Container fluid>
 
         <img className="logo" src="../../assets/image/socialLogo_vectorBlack.svg" alt="logo"/>
+
+        
         
         </Container>
       </Jumbotron>
