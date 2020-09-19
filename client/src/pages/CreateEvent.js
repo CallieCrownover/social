@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function CreateEvent() {
    
     return (
-<form>
+{/* <form>
 <Input
   onChange={handleInputChange}
   name="title"
@@ -27,7 +27,7 @@ function CreateEvent() {
 </FormBtn>
 </form>
     )
-  }
+  } */}
 
 
   export default CreateEvent;
