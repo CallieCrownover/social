@@ -22,6 +22,15 @@ const router = require('express').Router();
             });
     });
 
+    router.get("/api/getAllEvents",(req,res)=>{
+        console.log("made it to get All Events")
+        db.Event.find().then(CallieStinks=>{
+            console.log("db response")
+            console.log(CallieStinks)
+            res.json(CallieStinks)
+        })
+    })
+
     // Route for logging user out
     // app.get("/logout", (req, res) => {
     //   req.logout();

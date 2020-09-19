@@ -34,9 +34,11 @@ const [testEvents, setTestEvents] = useState([]);
   }, []);
   
   function loadTestEvents() {
-    const res = API.getTestEvents()
-        console.log(res)
-        setTestEvents(res)
+    const res = API.getTestEvents().then(results=>{
+      console.log(results.data)
+      setTestEvents(results.data)
+    })
+       // setTestEvents(res)
       
   };
 //  API.getTestEvents = id => {
@@ -51,8 +53,8 @@ const [testEvents, setTestEvents] = useState([]);
     {testEvents.map(event => (
           <div className="d-flex justify-content-around ml-3">
           <EventCard
-            id={event.id}
-            key={event.id}
+            id={event._id}
+            key={event._id}
             name={event.eventName}
             image={event.image}
             location={event.location}
