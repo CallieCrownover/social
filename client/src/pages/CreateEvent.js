@@ -27,8 +27,9 @@ function CreateEvent() {
 </FormBtn>
 </form>
     )
-  } */}
 
+} */}
 
+    )}
   export default CreateEvent;
   
