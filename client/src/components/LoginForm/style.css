@@ -19,7 +19,7 @@
     margin-right: 50px;
     margin-bottom: 50px;
     width: 400px;
-    height: 800px;
+    height: 600px;
     padding-top: 25px;
 }
 
@@ -39,10 +39,22 @@
     margin-bottom: 40px;
 }
 
+.flip-btn {
+    width: 200px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 .sign-in-image {
     width: 200px;
     height: 35px;
 }
+
+.red { 
+    color: red;
+}
+
 
 
 

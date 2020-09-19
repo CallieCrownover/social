@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
-  Button,
+  Button, 
 } from 'reactstrap';
 import API from "../../utils/API";
 
@@ -37,6 +37,19 @@ function handleFormSubmit(event) {
       .catch(err => console.log(err));
   }
 };
+
+function handleFlipForm(event) {
+  event.preventDefault();
+
+  const flipForm = document.querySelector('.main2');
+  flipForm.classList.add('animate__animated', 'animate__flip');
+  flipForm.addEventListener('animate__', () => {
+    return(
+      <div className="main2">
+     </div>
+    )
+  })
+}
 
 
 
@@ -92,7 +105,13 @@ function handleFormSubmit(event) {
           Sign Up</Button>
 
         <h2>Already have an account?</h2>
-        <p>Log in here</p>
+        
+
+        <div className="main2">
+        <Button className="flip-btn" color="info"
+        onClick={handleFlipForm}
+        >Log in here</Button>
+
         <Col>
           <FormGroup>
             <Label>Email</Label>
@@ -122,6 +141,7 @@ function handleFormSubmit(event) {
         onClick={handleFormSubmit}
         >
           Log In</Button>
+          </div>
       </Form>
      </Container>
      
