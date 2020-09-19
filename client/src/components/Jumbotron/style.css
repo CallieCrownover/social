@@ -1,8 +1,8 @@
 .jumbotron {
   background: linear-gradient(
   309deg,
-  rgb(114, 85, 216) 30%,
-  rgb(130, 155, 136) 70%);
+  rgb(130, 155, 136) 30%,
+  rgb(122, 91, 233) 70%);
   height: 175px;
   color: rgb(45, 238, 45);
   
@@ -18,3 +18,4 @@
   height: 100%;
   width: 100%;
 }
+

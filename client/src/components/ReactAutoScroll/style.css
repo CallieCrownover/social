@@ -2,15 +2,10 @@
     
     /* background-color: rgb(16, 153, 177); */
     margin-top: 40px;
-    margin-right: 50px;
-    width: 950px;
+    margin-right: 100px;
+    width: 1150px;
     height: 300px;
-    margin-right: 70px;
-}
-
-.scroll {
-    width: 50%;
-    float: right;
+   
 }
 
 p {
@@ -21,7 +16,7 @@ h1 {
 }
 
 .carousel-item {
-    width: 500px;
+    width: 400px;
     height: 425px;
     padding-left: 80px;
 }

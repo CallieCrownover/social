@@ -10,22 +10,28 @@ import SocialJumbotron from "../components/Jumbotron";
 function LoginPage() {
 
   return(
-  <div>
+    <div>
+  <div className="jumbo">
   <SocialJumbotron />
-  <ReactAutoScroll></ReactAutoScroll>
-   <LoginForm />
-   </div>
+  </div>
+    <div className="main d-sm-inline-flex">
+      <div className="login-div"> 
+    <LoginForm />
+    </div>
+    <div className="scrolling-div">
+    <ReactAutoScroll></ReactAutoScroll>
+    </div>
+  
+   
+  
+    </div>
+
+    </div>
+  
   
   );
-   
- 
-      
-
-    
+     
   }
-
-
-       
 
 
 export default LoginPage;
