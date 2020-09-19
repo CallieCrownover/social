@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react"; 
 import EventCard from "../components/EventCard";
 import API from "../utils/API";
+import {
+  Container,
+  Row,
+  Col
+} from "reactstrap";
+import Jumbotron from "../components/Jumbotron";
 
 function Event() {
+
   // Setting our component's initial state
   // const [events, setEvents] = useState([]);
 
@@ -20,7 +27,6 @@ function Event() {
   //     )
   //       .catch(err => console.log(err));
   // };
-
 const [testEvents, setTestEvents] = useState([]);
 
   useEffect(() => {
@@ -38,10 +44,13 @@ const [testEvents, setTestEvents] = useState([]);
 //     // Set this.state.friends equal to the new friends array
 //     setTestEvents(events)
 //   }
-
   return(
     <div>
-       {testEvents.map(event => (
+    <Jumbotron />
+    <Container fluid>
+    <Row>
+    {testEvents.map(event => (
+          <Col xs="3">
           <EventCard
             id={event.id}
             key={event.id}
@@ -52,7 +61,10 @@ const [testEvents, setTestEvents] = useState([]);
             date={event.date}
             time={event.time}
           />
-        ))}
+          </Col>
+    ))}
+    </Row>
+    </Container>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const testEvents = [
     description: "Come join us to throw a bunch of axes!",
     date: "October 17th, 2020",
     time: "4pm-9pm",
-    image: "https://media.istockphoto.com/photos/bowling-picture-id480732472?k=6&m=480732472&s=612x612&w=0&h=5NOYSs5huZiVrj0FanxaB2feafYLKj2qzVyzEXqeydI="
+    image: 'https://sonoma.edu/sites/www/files/field/image/free_bowling.jpg'
   },
   { 
     id: 2,
@@ -17,7 +17,7 @@ const testEvents = [
     description: "Become one with nature",
     date: "October 20th, 2020",
     time: "8am",
-    image: "https://media.istockphoto.com/photos/bowling-picture-id480732472?k=6&m=480732472&s=612x612&w=0&h=5NOYSs5huZiVrj0FanxaB2feafYLKj2qzVyzEXqeydI="
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTs6WBzJ-M6FtmS06K4GvNBoGYSioYFP5Spgw&usqp=CAU"
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const testEvents = [
     description: "Painting the night away while sipping on some wine!",
     date: "November 11th, 2020",
     time: "5pm-8pm",
-    image: "https://media.istockphoto.com/photos/bowling-picture-id480732472?k=6&m=480732472&s=612x612&w=0&h=5NOYSs5huZiVrj0FanxaB2feafYLKj2qzVyzEXqeydI="
+    image: 'https://media.truelocal.com.au/4/9/42784066-3AAF-45C6-BF44-B6AC6E9C4049/1521284059904_IMG_8143-300x0.jpg'
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const testEvents = [
       "Get your zen on! Come do yoga at dawn with us and stretch the day away.",
     date: "September 30th, 2020",
     time: "5am-7am",
-    image: "https://media.istockphoto.com/photos/bowling-picture-id480732472?k=6&m=480732472&s=612x612&w=0&h=5NOYSs5huZiVrj0FanxaB2feafYLKj2qzVyzEXqeydI="
+    image: 'https://ak.picdn.net/shutterstock/videos/1026372254/thumb/1.jpg'
   },
 ]
 
