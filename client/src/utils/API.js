@@ -8,7 +8,7 @@ const testEvents = [
     description: "Come join us to throw a bunch of axes!",
     date: "October 17th, 2020",
     time: "4pm-9pm",
-    image: 'https://sonoma.edu/sites/www/files/field/image/free_bowling.jpg'
+    image: 'https://www.northwestmilitary.com/northwest-travel/attractions/2019/01/Urban-axe-throwing-trend-hits-the-Northwest/uploads/articles/29881-banner-Urban-axe-throwing-trend-hits-the-Northwest.jpg'
   },
   { 
     id: 2,

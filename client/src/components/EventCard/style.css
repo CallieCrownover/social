@@ -1,40 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-*{
-  box-sizing: border-box;
-}
-
-.card-element{
-  height: 100%;
-  width: 100%
+.card-element {
+  margin-bottom: 100%;
 }
 
 .event-card {
    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #e1b8f1;
     border-radius: 50px;
-    height: 100%;
 
 }
 .card:hover {
   box-shadow: 5px 5px 15px 5px #333232;
-    transform: scale(1.10, 1.10);
+    transform: scale(1.01, 1.01);
 }
 
 .event-title {
     font-weight: bolder;
     font-size: 32px;
     letter-spacing: 2pt;
+    color:#110338;
 }
 
 .event-description {
-    size: 22px;
+  font-size: 14pt;
+  color:#110338;
 }
 
-.event-location, .event-date, .event-time {
-    size: 14px;
+.event-date, .event-time, .event-location {
+  font-size: 10pt;
+  color: rgb(56, 55, 55);
+  text-align: left;
+}
+
+
+
+.sign-up-btn {
+  text-align: right;
+}
+
+.card-img{
+  width: 100%!important;
+  height: 240px!important;
+  object-fit: cover;
 }
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"; 
 import EventCard from "../components/EventCard";
 import API from "../utils/API";
-import {
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+// import {
+//   Container,
+//   Row,
+//   Col
+// } from "reactstrap";
 import Jumbotron from "../components/Jumbotron";
 
 function Event() {
@@ -46,11 +46,10 @@ const [testEvents, setTestEvents] = useState([]);
 //   }
   return(
     <div>
-    <Jumbotron />
-    <Container fluid>
-    <Row>
+    <Jumbotron className="jumbo"/>
+    <div className="d-flex justify-content-around ml-3">
     {testEvents.map(event => (
-          <Col xs="3">
+          <div className="d-flex justify-content-around ml-3">
           <EventCard
             id={event.id}
             key={event.id}
@@ -61,10 +60,9 @@ const [testEvents, setTestEvents] = useState([]);
             date={event.date}
             time={event.time}
           />
-          </Col>
+          </div>
     ))}
-    </Row>
-    </Container>
+    </div>
     </div>
   )
 }
