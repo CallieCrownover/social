@@ -9,42 +9,42 @@ import {
   } from "reactstrap";
 import "./style.css";
   
-  const style = { width: "18rem" };
+  const style = { width: "25rem" };
   
   function EventCard(props) {
     return (
-      <div className="card-element">
+      <div className="card-element card-deck">
         <Card style={style} className="card event-card">
-          <div className="event-img">
+          <div className="event-image">
           <CardImg
             alt="..."
             src={props.image}
-            top
+            className="card-img"
           ></CardImg>
           </div>
           <CardBody>
-            <div className="event-details">
-            <CardTitle className="event-title">{props.name}</CardTitle>
-            <div className="event-description">
+            <CardTitle className="event-title d-inline-flex">{props.name}</CardTitle>
             <CardText>
+              <p className="event-description">
               {props.description}
+              </p>
             </CardText>
-            </div>
-            <div className="event-location">
-            <CardText>
+            <CardText >
+              <p className="event-location">
               {props.location}
+              </p>
             </CardText>
-            </div>
-            <div className="event-date">
             <CardText>
+              <p className="event-date">
               {props.date}
+              </p>
             </CardText>
-            </div>
-            <div className="event-time">
             <CardText>
+              <p className="event-time">
               {props.time}
+              </p>
             </CardText>
-            </div>
+            <div className="sign-up-btn">
             <Button
               className="signup"
               href="#"
