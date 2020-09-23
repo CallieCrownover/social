@@ -13,6 +13,7 @@ import "./style.css";
   
   function EventCard(props) {
     return (
+      <div className="page-wrapper">
       <div className="card-element card-deck">
         <Card style={style} className="card event-card">
           <div className="event-image">
@@ -46,7 +47,6 @@ import "./style.css";
             </CardText>
             <div className="sign-up-btn">
             <Button
-              className="signup"
               href="#"
               onClick={(e) => e.preventDefault()}
             >
@@ -55,6 +55,7 @@ import "./style.css";
             </div>
           </CardBody>
         </Card>
+      </div>
       </div>
     );
   }
