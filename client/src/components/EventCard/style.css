@@ -12,8 +12,8 @@
 .event-card {
    font-family: 'Quicksand', sans-serif;
     border-radius: 50px;
-
 }
+
 .card:hover {
   box-shadow: 5px 5px 15px 5px #333232;
     transform: scale(1.01, 1.01);
