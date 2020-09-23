@@ -12,7 +12,7 @@ import MyEvents from "./pages/MyEvents";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
       <Route exact path="/" component={Login} />
       <Route exact path="/events" component={Events} />
       <Route exact path="/create" component={CreateEvent} />

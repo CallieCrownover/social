@@ -1,4 +1,3 @@
-
 import "./style.css";
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
@@ -39,81 +38,12 @@ function handleFormSubmit(event) {
 };
 
 
-//working on flip
-function handleFlipForm(event) {
-  event.preventDefault();
-
-  const flipForm = document.querySelector('.main2');
-  flipForm.classList.add('animate__animated', 'animate__flip');
-  flipForm.addEventListener('animate__', () => {
-    return(
-      <div className="main2">
-     </div>
-    )
-  })
-}
-
-
 
   return (
-    
-    <div className="main" className="animate__animated animate__zoomInUp animate__delay-1s">
+    <div className="main2 animate__animated animate__fadeInDown animate__delay-1s" >
       
-      
-     
     <Container className="App">
       <Form className="form">
-      <h2>Sign Up</h2>
-      <Col>
-          <FormGroup>
-            
-              <img className="sign-in-image" src="https://lh3.googleusercontent.com/proxy/3AcmUBI5n3Fy_IUQpdplEA91hNwp7KOktkvpQimAMVhmZubdsEFYyB2_4v72likeY7qetoayJ2PkM6bUG3VCFWZljU5Wg7SPKuOBUhGp4vFtFKRNd28T7Q0i5nCtlR2Q-9YNpmyTCoxB4T5yvhuwfKtOMTOZXwA8"></img>
-            
-            </FormGroup>
-            <FormGroup>
-            <img className="sign-in-image" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png"></img>
-            </FormGroup>
-        </Col>
-        <p className="or">OR</p>
-        <Col>
-          <FormGroup className="signup-input">
-            <Label>Email</Label>
-            <Input className="login-input"
-              onChange={handleInputChange}
-              type="email"
-              name="email"
-              id="exampleEmail"
-              placeholder="myemail@email.com"
-            />
-          </FormGroup>
-        </Col>
-        <Col>
-          <FormGroup className="signup-input">
-            <Label for="examplePassword">Create a Password</Label>
-            <Input className="login-input"
-              onChange={handleInputChange}
-              type="password"
-              name="password"
-              id="examplePassword"
-              placeholder="********"
-            />
-          </FormGroup>
-        </Col>
-
-        <Button className="signup-btn" color="danger"
-        disabled={!(formObject.email && formObject.password)}
-        onClick={handleFormSubmit}
-        >
-          Sign Up</Button>
-
-        <h2>Already have an account?</h2>
-        
-
-        <div className="main2">
-        <Button className="flip-btn" color="info"
-        onClick={handleFlipForm}
-        >Log in here</Button>
-
         <Col>
           <FormGroup>
             <Label>Email</Label>
@@ -143,7 +73,6 @@ function handleFlipForm(event) {
         onClick={handleFormSubmit}
         >
           Log In</Button>
-          </div>
       </Form>
      </Container>
      

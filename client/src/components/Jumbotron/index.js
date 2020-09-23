@@ -8,7 +8,7 @@ const SocialJumbotron = (props) => {
       <Jumbotron fluid>
         
         <div className="container-full-bg d-flex align-items-center justify-content-center">
-        <img className="logo" src="../../assets/image/socialLogo_vectorGreen.svg" alt="logo"/>
+        <img className="logo" src="../../assets/image/socialLogo_vectorWhite.svg" alt="logo"/>
 
         
         </div>

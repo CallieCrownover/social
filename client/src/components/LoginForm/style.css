@@ -12,18 +12,15 @@
 
 .animate__animated {
     display: inline-block;
-    background-color: rgb(127, 110, 190);
-    float: left;
+    background-color: rgb(122, 91, 233);
     margin-top: 20px;
-    margin-left: 70px;
+    margin-left: 100px;
     margin-right: 50px;
     margin-bottom: 50px;
-    width: 400px;
+    width: 350px;
     height: 600px;
     padding-top: 25px;
 }
-
-
 
 .signup-btn {
     width: 200px;
@@ -42,8 +39,8 @@
 .flip-btn {
     width: 200px;
     color: black;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 80px;
 }
 
 .sign-in-image {
@@ -53,6 +50,13 @@
 
 .red { 
     color: red;
+}
+
+.intro {
+    margin-top: 20px;
+    margin-left: 10px;
+    color: black;
+    width: 800px;
 }
 
 
