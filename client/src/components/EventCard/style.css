@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-
-/* *{
-  box-sizing: border-box;
-} */
+.page-wrapper {
+  margin: 100%;
+}
 
 .card-element{
   height: 100%;
@@ -39,9 +38,9 @@
 }
 
 
-
 .sign-up-btn {
   text-align: right;
+  
 }
 
 .card-img{

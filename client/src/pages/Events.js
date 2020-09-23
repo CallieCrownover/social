@@ -49,9 +49,9 @@ const [testEvents, setTestEvents] = useState([]);
   return(
     <div>
     <Jumbotron className="jumbo"/>
-    <div className="d-flex justify-content-around ml-3">
+    <div className="d-flex justify-content-around">
     {testEvents.map(event => (
-          <div className="d-flex justify-content-around ml-3">
+          <div className="d-flex justify-content-around">
           <EventCard
             id={event._id}
             key={event._id}

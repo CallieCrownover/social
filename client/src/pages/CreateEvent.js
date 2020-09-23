@@ -1,35 +1,18 @@
 import React, { useState, useEffect } from "react"; 
+import CreateEventForm from "../components/CreateEventForm";
+import API from "../utils/API";
+import Jumbotron from "../components/Jumbotron"; 
 
 function CreateEvent() {
-   
-    return (
-{/* <form>
-<Input
-  onChange={handleInputChange}
-  name="title"
-  placeholder="Title (required)"
-/>
-<Input
-  onChange={handleInputChange}
-  name="author"
-  placeholder="Author (required)"
-/>
-<TextArea
-  onChange={handleInputChange}
-  name="synopsis"
-  placeholder="Synopsis (Optional)"
-/>
-<FormBtn
-  disabled={!(formObject.author && formObject.title)}
-  onClick={handleFormSubmit}
->
-  Submit Book
-</FormBtn>
-</form>
-    )
+  return(
+    <div>
+      <Jumbotron className="jumbo" />
+    <div className="d-flex">
+      <CreateEventForm />
+    </div>
+    </div>
+  )
+}
 
-} */}
-
-    )}
   export default CreateEvent;
   
