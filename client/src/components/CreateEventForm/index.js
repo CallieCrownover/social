@@ -4,29 +4,53 @@ import "./style.css";
 
 const CreateEventForm = () => {
   return (
-    <div className="create-event-form">
+    <div className="create-event-form flex-row">
     <Form>
-      <FormGroup>
-        <Label for="event-name">Event Name</Label>
+      <div className="form-elements">
+      <div className="flex-column">
+      <FormGroup className="form-header">
+        <Label  for="event-name">Event Name</Label>
         <Input name="event-name" id="name"/>
-      </FormGroup>
-      <FormGroup>
+      </FormGroup >
+      </div>
+      <div className="flex-column">
+      <FormGroup className="form-header">
         <Label for="event-location">Event Location</Label>
         <Input name="location" id="location"/>
       </FormGroup>
-      <FormGroup>
-        <Label for="event-date">Event Date</Label>
-        <Input name="date" id="date"/>
+      </div>
+      <div className="flex-column">
+      <FormGroup className="form-header">
+        <Label for="exampleDate">Date</Label>
+        <Input
+          type="date"
+          name="date"
+          id="exampleDate"
+          placeholder="date placeholder"
+        />
       </FormGroup>
-      <FormGroup>
-        <Label for="event-time">Event Time</Label>
-        <Input name="time" id="time"/>
+      </div>
+      <div className="flex-column">
+      <FormGroup className="form-header">
+        <Label for="exampleTime">Time</Label>
+        <Input
+          type="time"
+          name="time"
+          id="exampleTime"
+          placeholder="time placeholder"
+        />
       </FormGroup>
-      <FormGroup>
-        <Label for="event-description">Provide a brief description of your event</Label>
+      </div>
+      <div className="flex-column">
+      <FormGroup className="form-header">
+        <Label for="event-description">Briefly describe the event</Label>
         <Input type="textarea" name="description" id="description" />
       </FormGroup>
+      <div className="flex-column create-event-btn">
       <Button>Submit</Button>
+      </div>
+      </div>
+      </div>
     </Form>
     </div>
   );
