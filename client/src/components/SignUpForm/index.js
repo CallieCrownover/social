@@ -43,26 +43,31 @@ function handleFormSubmit(event) {
 
 
     return(
-        <div className="main" className="animate__animated animate__zoomInUp animate__delay-1s">
+        <div className="main" className="animate__animated animate__zoomIn animate__delay-1s rounded">
       
       
      
         <Container className="App">
           <Form className="form">
-          <h2>Sign Up</h2>
-          <Col>
+          <h2 className="signup-h2">Sign Up</h2>
+          <Col className="column">
               <FormGroup>
-                
-                  <img className="sign-in-image" src="https://cdn.productboard.com/production/attachments/2752f0c9d6a0ee54276eb87e11cd6adedc1fa7ef9915af59d1964f5818ab661b/portal_cover/Screen_Shot_2019-04-24_at_9.27.40_AM.png"></img>
+                <div className="google">
+                  <img className="sign-in-image rounded" src="https://cdn.productboard.com/production/attachments/2752f0c9d6a0ee54276eb87e11cd6adedc1fa7ef9915af59d1964f5818ab661b/portal_cover/Screen_Shot_2019-04-24_at_9.27.40_AM.png"></img>
+                  </div>
                 
                 </FormGroup>
                 <FormGroup>
-                <img className="sign-in-image" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png"></img>
+                  <div className="facebook">
+                <img className="sign-in-image rounded" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png"></img>
+                </div>
                 </FormGroup>
             </Col>
-            <p className="or">OR</p>
-            <Col>
-              <FormGroup className="signup-input">
+
+            <div class="align-self-center">
+            <p className="or-p">OR</p>
+            <Col className="column">
+              <FormGroup className="signup-input rounded">
                 <Label>Email</Label>
                 <Input className="login-input"
                   onChange={handleInputChange}
@@ -73,8 +78,8 @@ function handleFormSubmit(event) {
                 />
               </FormGroup>
             </Col>
-            <Col>
-              <FormGroup className="signup-input">
+            <Col className="column">
+              <FormGroup className="signup-input rounded">
                 <Label for="examplePassword">Create a Password</Label>
                 <Input className="login-input"
                   onChange={handleInputChange}
@@ -86,13 +91,13 @@ function handleFormSubmit(event) {
               </FormGroup>
             </Col>
     
-            <Button className="signup-btn" color="danger"
+            <Button className="signup-btn rounded" color="danger"
             disabled={!(formObject.email && formObject.password)}
             onClick={handleFormSubmit}
             >
               Sign Up</Button>
     
-            <h2>Already have an account?</h2>
+              </div>
           
         
         </Form>

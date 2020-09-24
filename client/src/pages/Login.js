@@ -12,7 +12,7 @@ import LoginFlipBtn from '../components/LoginFlipBtn';
 function LoginPage() {
 
   const [signUpComp, setSignUpComp]=useState(true)
-  const [buttonName , setButtonName] = useState("Log in Here")
+  const [buttonName , setButtonName] = useState("Already have an account? Log in here")
 
   function handleClick(){
     if(signUpComp ===true){
@@ -20,19 +20,20 @@ function LoginPage() {
 
     }else if (signUpComp ===false){
       setSignUpComp(true)
-      setButtonName("Log in here")
+      setButtonName("Already have an account? Log in here")
     }
     if(signUpComp ===false){
       setSignUpComp(true)
 
     }else if (signUpComp ===true){
       setSignUpComp(false)
-      setButtonName("Sign up here")
+      setButtonName("Create new account")
         }
-  
+
   }
 
   return(
+    
     <div>
   <div className="jumbo">
   <SocialJumbotron />
@@ -56,7 +57,7 @@ function LoginPage() {
 
     </div>
   
-  
+    
   );
     
    

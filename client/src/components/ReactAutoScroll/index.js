@@ -47,7 +47,7 @@ const items = [
 
 const ReactAutoScroll = () =>
 
-      <div className="scroll" >
+      <div className="scroll" className="carousel slide carousel-fade">
      
 <UncontrolledCarousel items={items} />
 
