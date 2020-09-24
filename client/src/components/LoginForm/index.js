@@ -40,12 +40,13 @@ function handleFormSubmit(event) {
 
 
   return (
-    <div className="main2 animate__animated animate__fadeInDown animate__delay-1s" >
+    <div className="main2" className="animate__animated animate__fadeInLeftBig animate__ rounded">
       
     <Container className="App">
-      <Form className="form">
+      <Form className="login-form">
+      <h2 className="login-h2">Log In</h2>
         <Col>
-          <FormGroup>
+          <FormGroup className="login-input rounded">
             <Label>Email</Label>
             <Input className="login-input"
               onChange={handleInputChange}
@@ -57,7 +58,7 @@ function handleFormSubmit(event) {
           </FormGroup>
         </Col>
         <Col>
-          <FormGroup>
+          <FormGroup className="login-input rounded">
             <Label for="examplePassword">Password</Label>
             <Input className="login-input"
               onChange={handleInputChange}
@@ -68,7 +69,7 @@ function handleFormSubmit(event) {
             />
           </FormGroup>
         </Col>
-        <Button className="login-btn" color="danger"
+        <Button className="login-btn rounded" color="danger"
         disabled={!(formObject.email && formObject.password)}
         onClick={handleFormSubmit}
         >

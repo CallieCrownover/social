@@ -1,3 +1,12 @@
 .btn-div {
-    margin-left: 170px;
+    margin-left: 130px;
+   margin-bottom: 30px;
+}
+
+.flip-btn {
+    width: 200px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    margin-left: 10px;
 }

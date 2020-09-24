@@ -1,4 +1,3 @@
-
 import "./style.css";
 import React, { useState, useEffect } from 'react';
 import {
@@ -11,17 +10,17 @@ import API from "../../utils/API";
 
 
 
-function LoginFlipBtn (props) {
+function MyEventsBtn (props) {
 
 
 return(
-    <div className="btn-div" >
+    
       
-     <Button className="flip-btn" color="info"
+     <Button className="flip-btn-2" color="info"
       onClick={props.handleClick()}
 >{props.buttonName}
 </Button>
-    </div>
+    
   )
 }
 
@@ -29,4 +28,4 @@ return(
 
 
 
-export default LoginFlipBtn;
+export default MyEventsBtn;

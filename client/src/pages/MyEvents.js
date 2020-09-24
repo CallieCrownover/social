@@ -1,0 +1,54 @@
+import React, { useState, useEffect } from 'react';
+import Jumbotron from "../components/Jumbotron"; 
+import MyEventsList from "../components/MyEventsList";
+import MyUpcomingEvents from "../components/MyUpcomingEvents";
+import MyEventsBtn from "../components/MyEventsBtn";
+import API from "../utils/API";
+
+
+
+function MyEvents() {
+
+    const [myEvents, setMyEvents]=useState(true)
+  const [buttonName , setButtonName] = useState("Go to my events")
+
+  function handleClick(){
+    if(myEvents ===true){
+      setMyEvents(false)
+
+    }else if (myEvents ===false){
+      setMyEvents(true)
+      setButtonName("Go to my events")
+    }
+    if(myEvents ===false){
+      setMyEvents(true)
+
+    }else if (myEvents ===true){
+      setMyEvents(false)
+      setButtonName("Go to my upcoming events")
+        }
+
+  }
+
+   return(
+    <div>
+     <Jumbotron className="jumbo"/>
+     <div className="main d-sm-inline-flex">
+       
+       <div className="button-div">
+       <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
+       </div>
+       <div className="event-div"> 
+       {myEvents?<MyUpcomingEvents />:<MyEventsList />}
+       </div>
+       
+     </div>
+
+     </div>
+       
+   )
+
+
+}
+
+export default MyEvents;
