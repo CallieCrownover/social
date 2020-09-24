@@ -1,8 +1,27 @@
-.event-page-wrapper {
-    margin: 100%;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 .create-event-form {
-    height: 100%; 
-    width: 100%;
+    padding: 10%;
+    text-align: center; 
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.create-event-btn {
+    padding: 10%; 
+    position: relative;
+    margin-left: 0%;
+}
+
+.form-header {
+    background-color: transparent;
+    height: 20%; 
+    color: white;
+}
+
+.form-elements {
+    background-color: #C4C3D0;
+    width: 200%; 
+    padding: 20%;
+    border-radius: 50px;
 }
