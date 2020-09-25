@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
+import NavMenu from "../components/Navbar";
 import API from "../utils/API";
 
 
@@ -32,7 +33,8 @@ function MyEvents() {
 
    return(
     <div>
-     <Jumbotron className="jumbo"/>
+     <Jumbotron className="jumbo" />
+     <NavMenu />
      <div className="main d-sm-inline-flex">
        
        <div className="button-div">

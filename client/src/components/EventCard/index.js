@@ -1,17 +1,26 @@
 import React from "react"; 
 import {
-    Button,
-    Card,
-    CardBody,
-    CardImg,
-    CardTitle,
-    CardText,
+    Button, Card, CardBody, CardImg, CardTitle,CardText,
   } from "reactstrap";
 import "./style.css";
+import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"
   
   const style = { width: "25rem" };
+
+
   
   function EventCard(props) {
+
+   var image = {
+     OutdoorImg: OutdoorImg
+   }
+
+    if (props.category === "Outdoors & Adventure") {
+      image = image.OutdoorImg
+    }
+
+    console.log(props.category)
+
     return (
       <div className="page-wrapper">
       <div className="card-element card-deck">
@@ -19,7 +28,7 @@ import "./style.css";
           <div className="event-image">
           <CardImg
             alt="..."
-            src={props.image}
+            src={image}
             className="card-img"
           ></CardImg>
           </div>
