@@ -5,6 +5,10 @@ h1 {
     color: red;
 }
 
+.carousel {
+  max-width: 800px;
+}
+
 .carousel-item {
     width: 500px;
     height: 400px;

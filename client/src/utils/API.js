@@ -13,6 +13,9 @@ export default {
   },
   saveUser: function(user) {
     return axios.post("/api/signup", user)
+  },
+  createEventForm: function(user) {
+    return axios.post("/api/createform", user)
   }
 }
 
