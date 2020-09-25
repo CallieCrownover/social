@@ -5,12 +5,12 @@ export default {
 
   // Gets all events
   getEvents: function() {
-    return axios.get("/api/events")
-  },
-
-  getTestEvents: function(){
     return axios.get("/api/getAllEvents")
   },
+
+  // getTestEvents: function(){
+  //   return axios.get("/api/getAllEvents")
+  // },
   saveUser: function(user) {
     return axios.post("/api/signup", user)
   }
