@@ -31,6 +31,27 @@ const router = require('express').Router();
         })
     })
 
+    router.post("/api/createform", (req, res) => {
+console.log("made it to the api create event")
+        db.Event.create({
+            eventName: req.body.eventName,
+            location: req.body.location,
+            date: req.body.date,
+            time: req.body.time,
+            category: req.body.category
+        })
+            .then(() => {
+                //res.redirect(307, "/api/Login");
+                res.send('Event added!')
+            })
+            .catch(err => {
+                console.log(err)
+                res.status(401).json(err);
+            });
+    });
+
+
+
     // Route for logging user out
     // app.get("/logout", (req, res) => {
     //   req.logout();

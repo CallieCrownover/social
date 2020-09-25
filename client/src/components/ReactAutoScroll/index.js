@@ -1,9 +1,6 @@
 import React from "react"; 
 import "./style.css";
 
-
-
-
 import { UncontrolledCarousel } from 'reactstrap';
 
 const items = [
@@ -47,7 +44,7 @@ const items = [
 
 const ReactAutoScroll = () =>
 
-      <div className="scroll" className="carousel slide carousel-fade">
+      <div className="carousel slide carousel-fade scroll">
      
 <UncontrolledCarousel items={items} />
 
