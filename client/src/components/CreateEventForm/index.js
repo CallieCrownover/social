@@ -1,12 +1,27 @@
-import React, {useState} from 'react';
+
+import React, {useState, useEffect} from 'react';
 import { Button, Form, FormGroup, Label, Input, Col} from 'reactstrap';
+import React,{useEffect} from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import "./style.css";
+import API from "../../utils/API"
 
 
 const CreateEventForm = () => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggle = () => setDropdownOpen(prevState => !prevState);
+useEffect(()=>{
+  let data = {
+    eventName:"Event 1",
+    location:"NC",
+    date:"2010-09-02",
+    time:"2:00pm",
+    category:"fun stuff"
+  }
+  console.log("in the use effect")
+API.createEventForm(data).then(response=>{console.log("RESPONSE") ;console.log(response)})
+
+},[])
+
 
 
   return (
@@ -78,6 +93,6 @@ const CreateEventForm = () => {
     </Form>
     </div>
   );
-}
+};
 
 export default CreateEventForm;

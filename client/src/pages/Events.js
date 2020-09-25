@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"; 
 import EventCard from "../components/EventCard";
+import NavMenu from "../components/Navbar";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 
@@ -21,6 +22,7 @@ const [events, setEvents] = useState([]);
   return(
     <div>
     <Jumbotron className="jumbo"/>
+    <NavMenu />
     <div className="d-flex justify-content-around">
     {events.map(event => (
           <div className="d-flex justify-content-around">

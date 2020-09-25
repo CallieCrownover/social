@@ -9,7 +9,7 @@ const eventSchema = new Schema({
   description: String,
   date: { type: String, required: true },
   time: { type: String, required: true },
-  category: { type: String, required: false}
+  category: { type: String, required: true }
 });
 
 //table in the database
