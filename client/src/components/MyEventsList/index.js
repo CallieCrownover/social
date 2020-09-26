@@ -6,7 +6,7 @@ const MyEvents = () => {
   return (
     
       <Container>
-        <h1>My Events</h1>
+        <h1>Events I'm Hosting</h1>
         
       
       </Container>
