@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Jumbotron from "../components/Jumbotron"; 
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
 import NavMenu from "../components/NavBar";
-import API from "../utils/API";
+// import API from "../utils/API";
 
 
 

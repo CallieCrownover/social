@@ -1,6 +1,6 @@
 import "./style.css";
 import React from 'react';
-import { Jumbotron, Container } from 'reactstrap';
+import { Jumbotron } from 'reactstrap';
 
 const SocialJumbotron = (props) => {
   return (

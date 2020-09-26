@@ -1,5 +1,5 @@
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Button, Form, FormGroup, Label, Input, Col} from 'reactstrap';
 import "./style.css";
 import API from "../../utils/API"
@@ -23,7 +23,7 @@ import API from "../../utils/API"
 
 function CreateEventForm(props) {
   // const history = useHistory()
-  const [event, setEvent] = useState([])
+  // const [event, setEvent] = useState([])
   const [formObject, setFormObject] = useState({})
 
  function handleInputChange(event) {
@@ -46,6 +46,7 @@ function handleFormSubmit(event) {
       category:  formObject.category
     })
       .then(() => {
+        console.log("created an event")
         // console.log(history.push)
         // history.push('/Events')
     })
@@ -65,7 +66,7 @@ function handleFormSubmit(event) {
       <div className="flex-column">
       <FormGroup className="form-header">
         <Label  for="event-name">Event Name</Label>
-        <Input name="event-name" id="name"onChange={handleInputChange} />
+        <Input name="event-name" id="name" onChange={handleInputChange} />
       </FormGroup >
       <FormGroup className="form-header">
         <Label >Select Event Category</Label>
@@ -89,7 +90,7 @@ function handleFormSubmit(event) {
       <div className="flex-column">
       <FormGroup className="form-header">
         <Label for="event-location">Event Location</Label>
-        <Input name="location" id="location"/>
+        <Input name="location" id="location" onChange={handleInputChange} />
       </FormGroup>
       </div>
       <div className="flex-column">
@@ -100,6 +101,7 @@ function handleFormSubmit(event) {
           name="date"
           id="exampleDate"
           placeholder="date placeholder"
+          onChange={handleInputChange}
         />
       </FormGroup>
       </div>
@@ -111,13 +113,14 @@ function handleFormSubmit(event) {
           name="time"
           id="exampleTime"
           placeholder="time placeholder"
+          onChange={handleInputChange}
         />
       </FormGroup>
       </div>
       <div className="flex-column">
       <FormGroup className="form-header">
         <Label for="event-description">Briefly describe the event</Label>
-        <Input type="textarea" name="description" id="description" />
+        <Input type="textarea" name="description" id="description" onChange={handleInputChange} />
       </FormGroup>
       <div className="flex-column create-event-btn">
       <Button onClick={handleFormSubmit} >Submit</Button>

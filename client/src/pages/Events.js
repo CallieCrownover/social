@@ -14,7 +14,8 @@ const [events, setEvents] = useState([]);
   
   function loadEvents() {
     const res = API.getEvents().then(results=>{
-      console.log(results.data)
+      console.log(results.data);
+      console.log(res);
       setEvents(results.data)
     })
   };
