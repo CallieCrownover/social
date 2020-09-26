@@ -3,7 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
-import NavMenu from "../components/Navbar";
+import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 
 

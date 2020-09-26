@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"; 
 import EventCard from "../components/EventCard";
-import NavMenu from "../components/Navbar";
+import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 
