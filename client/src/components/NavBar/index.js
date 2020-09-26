@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
+import "./style.css"
 
 
 const NavMenu = (props) => {
@@ -10,18 +10,21 @@ const NavMenu = (props) => {
   
 
   return (
-    <div className="nav-menu d-flex justify-content-top">
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle caret id="navBtn">
+    <div className="nav-menu">
+      <div className="nav-btn">
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} className="dropdown">
+      <DropdownToggle caret className="navBtn">
         Menu
         </DropdownToggle>
-      <DropdownMenu>
+      <DropdownMenu className="dropdown-menu rounded">
       <DropdownItem href="/create">Create an Event</DropdownItem>
         <DropdownItem href="/events">All Events</DropdownItem>
-        <DropdownItem href="/myevents">My Events/Upcoming Events</DropdownItem>
+        <DropdownItem href="/myevents">Events I'm Hosting</DropdownItem>
+        <DropdownItem href="/myevents">My Upcoming Events</DropdownItem>
         <DropdownItem href="/">Logout</DropdownItem>
        </DropdownMenu>
     </Dropdown>
+    </div>
     </div>
   );
 }

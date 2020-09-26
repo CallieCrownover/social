@@ -11,7 +11,7 @@ import NavMenu from "../components/NavBar";
 function MyEvents() {
 
     const [myEvents, setMyEvents]=useState(true)
-  const [buttonName , setButtonName] = useState("Go to my events")
+  const [buttonName , setButtonName] = useState("Go to events I'm hosting")
 
   function handleClick(){
     if(myEvents ===true){
@@ -19,7 +19,7 @@ function MyEvents() {
 
     }else if (myEvents ===false){
       setMyEvents(true)
-      setButtonName("Go to my events")
+      setButtonName("Go to events I'm hosting")
     }
     if(myEvents ===false){
       setMyEvents(true)
@@ -37,7 +37,7 @@ function MyEvents() {
      <NavMenu />
      <div className="main d-sm-inline-flex">
        
-       <div className="button-div">
+       <div className="button-div rounded">
        <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
        </div>
        <div className="event-div"> 

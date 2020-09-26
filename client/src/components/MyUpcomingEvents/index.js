@@ -11,8 +11,8 @@ const MyUpcomingEvents = () => {
   return (
 
     <Container>
-    <div>
-      <h1>Upcoming Events</h1>
+    <div >
+      <h1> My Upcoming Events</h1>
     </div>
     <div className="media">
       
@@ -31,11 +31,11 @@ const MyUpcomingEvents = () => {
         </Media>
       </Media>
     </Media>
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
       <DropdownToggle caret id="navBtn">
         Attendees
         </DropdownToggle>
-      <DropdownMenu>
+        <DropdownMenu className="attendees rounded">
       <DropdownItem href="">1</DropdownItem>
         <DropdownItem href="">2</DropdownItem>
         <DropdownItem href="">3</DropdownItem>
