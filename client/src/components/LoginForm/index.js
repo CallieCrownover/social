@@ -32,6 +32,7 @@ function handleFormSubmit(event) {
       .then(() => {
         console.log(history.push)
         history.push('/Events')
+      
       })
       .catch(err => console.log(err));
   }
