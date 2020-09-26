@@ -1,5 +1,5 @@
 import "./style.css";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import {
   Container, Col, Form,
@@ -13,7 +13,7 @@ import API from "../../utils/API";
 
 function SignUpForm(props) {
   const history = useHistory()
-  const [users, setUsers] = useState([])
+  // const [users, setUsers] = useState([])
   const [formObject, setFormObject] = useState({})
 
  function handleInputChange(event) {
@@ -43,7 +43,7 @@ function handleFormSubmit(event) {
 
 
     return(
-        <div className="main" className="animate__animated animate__zoomIn animate__delay-1s rounded">
+        <div className="animate__animated animate__zoomIn animate__delay-1s rounded main">
       
       
      
@@ -53,13 +53,13 @@ function handleFormSubmit(event) {
           <Col className="column">
               <FormGroup>
                 <div className="google">
-                  <img className="sign-in-image rounded" src="https://cdn.productboard.com/production/attachments/2752f0c9d6a0ee54276eb87e11cd6adedc1fa7ef9915af59d1964f5818ab661b/portal_cover/Screen_Shot_2019-04-24_at_9.27.40_AM.png"></img>
+                  <img className="sign-in-image rounded" src="https://cdn.productboard.com/production/attachments/2752f0c9d6a0ee54276eb87e11cd6adedc1fa7ef9915af59d1964f5818ab661b/portal_cover/Screen_Shot_2019-04-24_at_9.27.40_AM.png" alt="Google logo"></img>
                   </div>
                 
                 </FormGroup>
                 <FormGroup>
                   <div className="facebook">
-                <img className="sign-in-image rounded" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png"></img>
+                <img className="sign-in-image rounded" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png" alt="Facebook Logo"></img>
                 </div>
                 </FormGroup>
             </Col>
