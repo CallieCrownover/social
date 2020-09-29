@@ -28,17 +28,17 @@ function CreateEventForm(props) {
 
  function handleInputChange(event) {
   const { name, value } = event.target;
+  console.log(value)
   setFormObject({...formObject, [name]: value})
 };
 
-// When the form is submitted, use the API.saveUser method to save the user data
-// Then reload users from the database
+// When the form is submitted, use the API.createEventForm method to save the user's event
 function handleFormSubmit(event) {
   event.preventDefault();
 
-  if (formObject.email && formObject.password) {
+  if (formObject.eventName && formObject.location && formObject.description && formObject.category) {
     API.createEventForm({
-      eventName: formObject.name,
+      eventName: formObject.eventName,
       location: formObject.location,
       description: formObject.description,
       date: formObject.date,
@@ -46,8 +46,7 @@ function handleFormSubmit(event) {
       category:  formObject.category
     })
       .then(() => {
-        // console.log(history.push)
-        // history.push('/Events')
+        console.log(event.data)
     })
       .catch(err => console.log(err));
   }
@@ -65,12 +64,12 @@ function handleFormSubmit(event) {
       <div className="flex-column">
       <FormGroup className="form-header">
         <Label  for="event-name">Event Name</Label>
-        <Input name="event-name" id="name"onChange={handleInputChange} />
+        <Input name="eventName" id="name"onChange={handleInputChange} />
       </FormGroup >
       <FormGroup className="form-header">
         <Label >Select Event Category</Label>
         <Col md={20}>
-          <Input type="select" name="event-category" id="event-category" onChange={handleInputChange}>
+          <Input type="select" name="category" id="event-category" onChange={handleInputChange}>
             <option>Outdoors &amp; Adventure</option>
             <option>Health &amp; Wellness</option>
             <option>Photography</option>
@@ -89,7 +88,7 @@ function handleFormSubmit(event) {
       <div className="flex-column">
       <FormGroup className="form-header">
         <Label for="event-location">Event Location</Label>
-        <Input name="location" id="location"/>
+        <Input name="location" id="location" onChange={handleInputChange}/>
       </FormGroup>
       </div>
       <div className="flex-column">
@@ -100,6 +99,7 @@ function handleFormSubmit(event) {
           name="date"
           id="exampleDate"
           placeholder="date placeholder"
+          onChange={handleInputChange}
         />
       </FormGroup>
       </div>
@@ -111,16 +111,21 @@ function handleFormSubmit(event) {
           name="time"
           id="exampleTime"
           placeholder="time placeholder"
+          onChange={handleInputChange}
         />
       </FormGroup>
       </div>
       <div className="flex-column">
       <FormGroup className="form-header">
-        <Label for="event-description">Briefly describe the event</Label>
-        <Input type="textarea" name="description" id="description" />
+        <Label for="description">Briefly describe the event</Label>
+        <Input type="textarea" name="description" id="event-description" onChange={handleInputChange}/>
       </FormGroup>
       <div className="flex-column create-event-btn">
-      <Button onClick={handleFormSubmit} >Submit</Button>
+      <Button 
+      disabled={!(formObject.eventName)}
+      onClick={handleFormSubmit} >
+        Submit
+      </Button>
       </div>
       </div>
       </div>
