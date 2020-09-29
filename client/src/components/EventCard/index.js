@@ -1,14 +1,10 @@
 import React from "react"; 
 import {
-    Button, Card, CardBody, CardImg, CardTitle,CardText,
+    Button, Card, CardBody, CardImg, CardTitle,CardText, Dropdown, Media, DropdownToggle, DropdownMenu, DropdownItem
   } from "reactstrap";
 import "./style.css";
 import api from "../../utils/API";
 import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"
-  
-  const style = { width: "25rem" };
-
-import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"; 
 import ArtImg from "../../assets/images/art-events-stock-photo.jpg"; 
 import BookImg from "../../assets/images/book-club-stock-photo.jpg"; 
 import FamilyImg from "../../assets/images/family-stock-photo.jpg"; 

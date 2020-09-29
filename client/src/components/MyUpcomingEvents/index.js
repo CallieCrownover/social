@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
 import "./style.css";
-import { Container } from 'reactstrap';
+import { Container, Dropdown, Media, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 // import EventsToAttend from "../EventsToAttend"
 
 
