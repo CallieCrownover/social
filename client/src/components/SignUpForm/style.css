@@ -1,5 +1,5 @@
 .form-group {
-    background-color: greenyellow;
+    background-color: rgb(173, 255, 47);
 }
 
 .column {
@@ -11,6 +11,14 @@
     margin-top: 10px;
 }
 
+.login-div {
+    width: 300px;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 150px;
+}
+
 .animate__animated {
     display: inline-block;
     background-color: rgb(122, 91, 233);
@@ -19,15 +27,18 @@
     margin-bottom: 50px;
     width: 300px;
     height: 450px;
-    padding-top: 20px;
+    padding-top: 60px;
+
 }
 
 .signup-h2 {
     margin-left: 70px;
+    color: white;
 }
 
 .or-p {
     margin-left: 120px;
+    color: white;
 }
 
 .signup-btn {
@@ -35,6 +46,7 @@
     color: black;
     margin-bottom: 40px;
     margin-left:30px;
+    background-color: rgb(173, 255, 47);
 }
 
 .sign-in-image {
@@ -50,6 +62,3 @@
     background-color: rgb(122, 91, 233);
 }
 
-.red { 
-    color: red;
-}

@@ -12,7 +12,7 @@ const NavMenu = (props) => {
   return (
     <div className="nav-menu">
       <div className="nav-btn">
-    <Dropdown isOpen={dropdownOpen} toggle={toggle} className="dropdown">
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} className="navbar-dropdown">
       <DropdownToggle caret className="navBtn">
         Menu
         </DropdownToggle>

@@ -47,11 +47,11 @@ function MyEvents() {
     <div>
      <Jumbotron className="jumbo" />
      <NavMenu />
-     <div className="main d-sm-inline-flex">
-       
-       <div className="button-div rounded">
+     <div className="button-div rounded">
        <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
        </div>
+     <div className="main d-sm-inline-flex">
+       
        <div className="event-div"> 
        {/* passing my events and createdEvents down as props */}
        {myEvents?<MyUpcomingEvents myEvents={myEvents} />:<MyEventsList createdEvents={myCreatedEvents} />}
