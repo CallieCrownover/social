@@ -43,7 +43,8 @@ function handleFormSubmit(event) {
       description: formObject.description,
       date: formObject.date,
       time: formObject.time,
-      category:  formObject.category
+      category:  formObject.category,
+      host: formObject.host
     })
       .then(() => {
 

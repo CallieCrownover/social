@@ -7,8 +7,8 @@ const bcrypt = require("bcryptjs");
 const userSchema = new Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
-  participant: { type: Schema.Types.ObjectId, ref: "Participant" },
-  eventName: { type: Schema.Types.ObjectId, ref: "Event" }
+  // participant: { type: Schema.Types.ObjectId, ref: "Participant" },
+  events: [{ type: Schema.Types.ObjectId, ref: "Event" }]
 });
 //table in the database
 const User = mongoose.model("User", userSchema);
