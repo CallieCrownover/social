@@ -9,8 +9,8 @@ const eventSchema = new Schema({
   date: { type: String, required: true },
   time: { type: String, required: true },
   category: { type: String, required: true },
-  email: { type: Schema.Types.ObjectId, ref: "User" },
-  participant: { type: Schema.Types.ObjectId, ref: "Participant" }
+  host: { type: Schema.Types.ObjectId, ref: "User" },
+  participants: [{ type: Schema.Types.ObjectId, ref: "User" }]
 });
 //table in the database
 const Event = mongoose.model("Event", eventSchema);

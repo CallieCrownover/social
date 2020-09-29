@@ -8,6 +8,9 @@ export default {
     return axios.get("/api/getAllEvents")
   },
 
+  eventSignUp: function(eventId){
+    return axios.get("/api/eventSignUp/" + eventId)
+  },
   // getTestEvents: function(){
   //   return axios.get("/api/getAllEvents")
   // },

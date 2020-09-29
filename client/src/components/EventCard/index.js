@@ -3,12 +3,11 @@ import {
     Button, Card, CardBody, CardImg, CardTitle,CardText,
   } from "reactstrap";
 import "./style.css";
+import api from "../../utils/API";
 import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"
   
   const style = { width: "25rem" };
 
-
-  
   function EventCard(props) {
 
    var image = {
@@ -57,7 +56,7 @@ import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"
             <div className="sign-up-btn">
             <Button
               href="#"
-              onClick={(e) => e.preventDefault()}
+              onClick={()=>api.eventSignUp(props._id)}
             >
               Sign Up!
             </Button>

@@ -31,6 +31,12 @@ const router = require('express').Router();
         })
     })
 
+    router.get("/api/eventSignUp/:eventId", () => {
+        const eventId = req.params.eventId
+        console.log(eventId);
+        console.log(req.user);
+    })
+
     router.post("/api/createform", (req, res) => {
 console.log("made it to the api create event")
         db.Event.create({
@@ -38,7 +44,9 @@ console.log("made it to the api create event")
             location: req.body.location,
             date: req.body.date,
             time: req.body.time,
-            category: req.body.category
+            category: req.body.category,
+            host: req.body.host           
+            // add a form entry for host on the components page 
         })
             .then(() => {
                 //res.redirect(307, "/api/Login");
@@ -49,6 +57,7 @@ console.log("made it to the api create event")
                 res.status(401).json(err);
             });
     });
+
 
 
 
