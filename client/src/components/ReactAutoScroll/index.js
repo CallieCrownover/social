@@ -7,36 +7,36 @@ const items = [
   {
     src: '../assets/image/axeThrowing.png',
     altText: 'Slide 1',
-    caption: <p>Come join us to throw a bunch of axes!</p>,
-    header: <h1>Bad Axe Throwing</h1>,
+    caption: <p className="descript rounded">Come join us to throw a bunch of axes!</p>,
+    header: <h1 className="event-name rounded">Bad Axe Throwing</h1>,
     key: '1'
   },
   {
     src: '../assets/image/PaintandSip.png',
     altText: 'Slide 2',
-    caption: <p>Painting the night away while sipping on some wine!</p>,
-    header: <h1>Sip and Paint</h1>,
+    caption: <p className="descript rounded">Painting the night away while sipping on some wine!</p>,
+    header: <h1 className="event-name rounded">Sip and Paint</h1>,
     key: '2'
   },
   {
     src: '../assets/image/yoga.png',
     altText: 'Slide 3',
-    caption: <p>Get your zen on! Come do yoga at dawn with us and stretch the day away.</p>,
-    header: <h1>Yoga at Dawn</h1>,
+    caption: <p className="descript rounded">Get your zen on! Come do yoga at dawn with us and stretch the day away.</p>,
+    header: <h1 className="event-name rounded">Yoga at Dawn</h1>,
     key: '3'
   },
   {
     src: '../assets/image/dogPark.png',
     altText: 'Slide 4',
-    caption: 'Slide 4',
-    header: 'Slide 4 Header',
+    caption: <p className="descript rounded">.</p>,
+    header: <h1 className="event-name rounded">Barktoberfest</h1>,
     key: '4'
   },
   {
     src: '../assets/image/Bowling.png',
     altText: 'Slide 5',
-    caption: 'Slide 5',
-    header: 'Slide 5 Header',
+    caption: <p className="descript rounded">.</p>,
+    header: <h1 className="event-name rounded">Bowling Bash</h1>,
     key: '5'
   },
 ];

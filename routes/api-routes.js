@@ -45,8 +45,9 @@ console.log("made it to the api create event")
             date: req.body.date,
             time: req.body.time,
             category: req.body.category,
-            host: req.body.host           
+            host: req.body.host,           
             // add a form entry for host on the components page 
+            description: req.body.description
         })
             .then(() => {
                 //res.redirect(307, "/api/Login");

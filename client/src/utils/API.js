@@ -19,6 +19,10 @@ export default {
   },
   createEventForm: function(user) {
     return axios.post("/api/createform", user)
+  }, 
+  
+  getMyEvents: function(user) {
+    return axios.get("/api/getMyEvents")
   }
 }
 

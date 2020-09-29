@@ -1,9 +1,4 @@
-p {
-    font-size: 20px;
-}
-h1 {
-    color: red;
-}
+
 
 .carousel {
   max-width: 800px;
@@ -12,7 +7,7 @@ h1 {
 .carousel-item {
     width: 500px;
     height: 400px;
-    padding-left: 10px;
+    padding-left: 25px;
     padding-right: 10px;
 
     background-position: 100% top;
@@ -29,4 +24,22 @@ h1 {
       background-color: lightblue;
     }
   }
+
+  .event-name {
+    background-color: rgb(216, 218, 219);
+    opacity: 0.6;
+    color: rgb(3, 26, 233);
+    font-weight: bolder;
+    font-size: 60px;
+  }
+
+  .descript {
+    background-color: rgb(216, 218, 219);
+    opacity: 0.6;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;;
+  }
+
+ 
 

@@ -1,18 +1,22 @@
 import React, { useState } from "react"; 
 import "./style.css";
-import { Media, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
+// import EventsToAttend from "../EventsToAttend"
 
-const MyUpcomingEvents = () => {
+
+const MyUpcomingEvents = (props) => {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
-
+     <div className="event-div rounded">
     <Container>
-    <div>
-      <h1>Upcoming Events</h1>
+      
+    <div >
+      <h1 className="d-flex justify-content-center"> My Upcoming Events</h1>
+      <hr></hr>
     </div>
     <div className="media">
       
@@ -31,11 +35,14 @@ const MyUpcomingEvents = () => {
         </Media>
       </Media>
     </Media>
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+    
+    </div>
+
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
       <DropdownToggle caret id="navBtn">
         Attendees
         </DropdownToggle>
-      <DropdownMenu>
+        <DropdownMenu className="dropdown-menu rounded">
       <DropdownItem href="">1</DropdownItem>
         <DropdownItem href="">2</DropdownItem>
         <DropdownItem href="">3</DropdownItem>
@@ -43,8 +50,14 @@ const MyUpcomingEvents = () => {
         <DropdownItem href="">5</DropdownItem>
        </DropdownMenu>
     </Dropdown>
+    <div>
+      <h1>My Upcoming Events</h1>
+    </div>
+    <div>
+    {/* <EventsToAttend /> */}
     </div>
     </Container>
+    </div>
   );
 };
 

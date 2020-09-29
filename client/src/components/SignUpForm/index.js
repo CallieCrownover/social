@@ -43,6 +43,7 @@ function handleFormSubmit(event) {
 
 
     return(
+        <div className="login-div">
         <div className="animate__animated animate__zoomIn animate__delay-1s rounded main">
       
       
@@ -50,7 +51,7 @@ function handleFormSubmit(event) {
         <Container className="App">
           <Form className="form">
           <h2 className="signup-h2">Sign Up</h2>
-          <Col className="column">
+          {/* <Col className="column">
               <FormGroup>
                 <div className="google">
                   <img className="sign-in-image rounded" src="https://cdn.productboard.com/production/attachments/2752f0c9d6a0ee54276eb87e11cd6adedc1fa7ef9915af59d1964f5818ab661b/portal_cover/Screen_Shot_2019-04-24_at_9.27.40_AM.png" alt="Google logo"></img>
@@ -62,10 +63,10 @@ function handleFormSubmit(event) {
                 <img className="sign-in-image rounded" src="https://img.pngio.com/el-caracol-mexican-restaurant-best-authentic-mexican-food-in-facebook-login-icon-png-713_151.png" alt="Facebook Logo"></img>
                 </div>
                 </FormGroup>
-            </Col>
+            </Col> */}
 
             <div class="align-self-center">
-            <p className="or-p">OR</p>
+            {/* <p className="or-p">OR</p> */}
             <Col className="column">
               <FormGroup className="signup-input rounded">
                 <Label>Email</Label>
@@ -90,20 +91,21 @@ function handleFormSubmit(event) {
                 />
               </FormGroup>
             </Col>
-    
-            <Button className="signup-btn rounded" color="danger"
+            
+              
+           </div>
+          
+        </Form>
+
+
+        <Button color="light alert" className="signup-btn rounded practice"
             disabled={!(formObject.email && formObject.password)}
             onClick={handleFormSubmit}
             >
-              Sign Up</Button>
-    
-              </div>
-          
-        
-        </Form>
+              Submit</Button>
      </Container>
      </div>
-
+     </div>
     );
 }
 

@@ -3,11 +3,12 @@
 }
 
 .login-form {
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .login-h2 {
     margin-left: 85px;
+    color: white;
 }
 
 .column {
@@ -30,11 +31,8 @@
     display: inline-block;
     background-color: rgb(122, 91, 233);
     margin-left: 100px;
-    margin-right: 50px;
-    margin-bottom: 50px;
     width: 300px;
     height: 450px;
-    padding-top: 20px;
 }
 
 .login-btn {
@@ -42,10 +40,6 @@
     color: black;
     margin-bottom: 50px;
     margin-left:30px;
-}
-
-.red { 
-    color: red;
 }
 
 .intro {
