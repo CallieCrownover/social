@@ -1,8 +1,10 @@
 import React, { useState } from "react"; 
 import "./style.css";
-import { Media, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
+// import EventsToAttend from "../EventsToAttend"
 
-const MyUpcomingEvents = () => {
+
+const MyUpcomingEvents = (props) => {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   
@@ -48,6 +50,12 @@ const MyUpcomingEvents = () => {
         <DropdownItem href="">5</DropdownItem>
        </DropdownMenu>
     </Dropdown>
+    <div>
+      <h1>My Upcoming Events</h1>
+    </div>
+    <div>
+    {/* <EventsToAttend /> */}
+    </div>
     </Container>
     </div>
   );
