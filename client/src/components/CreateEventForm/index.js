@@ -1,5 +1,5 @@
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Button, Form, FormGroup, Label, Input, Col} from 'reactstrap';
 import "./style.css";
 import API from "../../utils/API"
@@ -23,7 +23,7 @@ import API from "../../utils/API"
 
 function CreateEventForm(props) {
   // const history = useHistory()
-  const [event, setEvent] = useState([])
+  // const [event, setEvent] = useState([])
   const [formObject, setFormObject] = useState({})
 
  function handleInputChange(event) {
@@ -46,7 +46,9 @@ function handleFormSubmit(event) {
       category:  formObject.category
     })
       .then(() => {
+
         console.log(event.data)
+
     })
       .catch(err => console.log(err));
   }

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react"; 
+import React from "react"; 
 import CreateEventForm from "../components/CreateEventForm";
-import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron"; 
 import NavMenu from "../components/NavBar";
 

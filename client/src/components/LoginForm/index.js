@@ -1,5 +1,5 @@
 import "./style.css";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import {
   Container, Col, Form,
@@ -11,7 +11,7 @@ import API from "../../utils/API";
 
 function LoginForm(props) {
   const history = useHistory()
-  const [users, setUsers] = useState([])
+  // const [users, setUsers] = useState([])
   const [formObject, setFormObject] = useState({})
 
  function handleInputChange(event) {
@@ -41,7 +41,7 @@ function handleFormSubmit(event) {
 
 
   return (
-    <div className="main2" className="animate__animated animate__fadeInLeftBig animate__ rounded">
+    <div className="animate__animated animate__fadeInLeftBig animate__ rounded main2">
       
     <Container className="App">
       <Form className="login-form">

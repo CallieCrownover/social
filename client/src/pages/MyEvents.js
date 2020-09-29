@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Jumbotron from "../components/Jumbotron"; 
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
 import NavMenu from "../components/NavBar";
-import API from "../utils/API";
+// import API from "../utils/API";
 
 
 
 function MyEvents() {
 
-    const [myEvents, setMyEvents]=useState(true)
+  const [myEvents, setMyEvents]=useState(true)
   const [buttonName , setButtonName] = useState("Go to my events")
   const [myCreatedEvents, setMyCreatedEvents]=useState()
 
@@ -20,7 +20,7 @@ function MyEvents() {
 
     }else if (myEvents ===false){
       setMyEvents(true)
-      setButtonName("Go to my events")
+      setButtonName("Go to events I'm hosting")
     }
     if(myEvents ===false){
       setMyEvents(true)
@@ -49,7 +49,7 @@ function MyEvents() {
      <NavMenu />
      <div className="main d-sm-inline-flex">
        
-       <div className="button-div">
+       <div className="button-div rounded">
        <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
        </div>
        <div className="event-div"> 

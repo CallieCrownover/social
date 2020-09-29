@@ -1,13 +1,9 @@
 
 import "./style.css";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
     Button, 
   } from 'reactstrap';
-import { useHistory } from 'react-router-dom'
-import API from "../../utils/API";
-
-
 
 
 

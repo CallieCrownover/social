@@ -1,5 +1,6 @@
 .event-div {
-    width: 600px;
+    width: 800px;
+    background-color: rgb(235, 243, 252);
 }
 
 .media {
@@ -7,12 +8,19 @@
     margin-right: 20px;
 }
 
-.dropdown-toggle {
-    width: 110px;
-}
-
 .main {
     width: 100%;
+}
+
+
+
+.attendees {
+    width: 150px;
+}
+
+.attending-dropdown > button {
+    width:150px;
+    margin-right: 20px;
 }
 
 
