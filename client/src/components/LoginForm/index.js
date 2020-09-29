@@ -41,6 +41,7 @@ function handleFormSubmit(event) {
 
 
   return (
+    <div className="login-div">
     <div className="animate__animated animate__fadeInLeftBig animate__ rounded main2">
       
     <Container className="App">
@@ -70,16 +71,18 @@ function handleFormSubmit(event) {
             />
           </FormGroup>
         </Col>
-        <Button className="login-btn rounded" color="danger"
+        
+      </Form>
+
+      <Button className="login-btn rounded" color="light alert"
         disabled={!(formObject.email && formObject.password)}
         onClick={handleFormSubmit}
         >
-          Log In</Button>
-      </Form>
+          Submit</Button>
      </Container>
      
      </div>
-
+     </div>
 
 
 );

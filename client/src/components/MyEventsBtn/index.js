@@ -13,11 +13,12 @@ function MyEventsBtn (props) {
 
 return(
     
-      
-     <Button className="flip-btn-2" color="info"
+      <div className="flip-btn-2">
+     <Button className="events-toggle" 
       onClick={props.handleClick()}
 >{props.buttonName}
 </Button>
+</div>
     
   )
 }

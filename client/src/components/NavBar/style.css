@@ -3,13 +3,15 @@
 
 .dropdown >button {
     width: 200px;
-    background-color: rgb(52, 58, 145)
+    background-color: rgb(122, 91, 233);
+    color: black;
+    font-size: 25px;
 }
 
 .nav-btn {
-    margin-left: 15px;
+    margin-left: 55px;
 }
 
-.dropdown-menu {
+.navbar-dropdown-menu {
     width: 200px;
 }

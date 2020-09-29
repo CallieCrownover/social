@@ -9,10 +9,12 @@ const MyUpcomingEvents = () => {
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
-
+     <div className="event-div rounded">
     <Container>
+      
     <div >
-      <h1> My Upcoming Events</h1>
+      <h1 className="d-flex justify-content-center"> My Upcoming Events</h1>
+      <hr></hr>
     </div>
     <div className="media">
       
@@ -31,11 +33,14 @@ const MyUpcomingEvents = () => {
         </Media>
       </Media>
     </Media>
+    
+    </div>
+
     <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
       <DropdownToggle caret id="navBtn">
         Attendees
         </DropdownToggle>
-        <DropdownMenu className="attendees rounded">
+        <DropdownMenu className="dropdown-menu rounded">
       <DropdownItem href="">1</DropdownItem>
         <DropdownItem href="">2</DropdownItem>
         <DropdownItem href="">3</DropdownItem>
@@ -43,8 +48,8 @@ const MyUpcomingEvents = () => {
         <DropdownItem href="">5</DropdownItem>
        </DropdownMenu>
     </Dropdown>
-    </div>
     </Container>
+    </div>
   );
 };
 
