@@ -38,7 +38,8 @@ console.log("made it to the api create event")
             location: req.body.location,
             date: req.body.date,
             time: req.body.time,
-            category: req.body.category
+            category: req.body.category,
+            description: req.body.location
         })
             .then(() => {
                 //res.redirect(307, "/api/Login");
