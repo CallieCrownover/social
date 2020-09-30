@@ -21,7 +21,8 @@ const eventSeed = [
     description: "Come join us to throw a bunch of axes!",
     date: "October 17th, 2020",
     time: "4pm-9pm",
-    category: "Axe Throwing"
+    category: "Axe Throwing",
+    participants: []
   },
   {
     eventName: "Hiking Crowders Mountain",
@@ -29,7 +30,8 @@ const eventSeed = [
     description: "Become one with nature",
     date: "October 20th, 2020",
     time: "8am",
-    category: "Outdoors & Adventure"
+    category: "Outdoors & Adventure",
+    participants: []
   },
   {
     eventName: "Sip and Paint",
@@ -37,7 +39,8 @@ const eventSeed = [
     description: "Painting the night away while sipping on some wine!",
     date: "November 11th, 2020",
     time: "5pm-8pm",
-    category: "Arts"
+    category: "Arts",
+    participants: []
   },
   {
     eventName: "Yoga at Dawn",
@@ -46,7 +49,8 @@ const eventSeed = [
       "Get your zen on! Come do yoga at dawn with us and stretch the day away.",
     date: "September 30th, 2020",
     time: "5am-7am",
-    category: "Health & Wellness"
+    category: "Health & Wellness",
+    participants: []
   },
 ];
 
@@ -59,7 +63,7 @@ db.User
     process.exit(0);
   })
   .catch((err) => {
-    console.error(err);
+    console.error(err)
     process.exit(1);
   });
 

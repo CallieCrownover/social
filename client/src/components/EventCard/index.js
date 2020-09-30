@@ -20,7 +20,8 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
   const style = { width: "25rem" };
   
   function EventCard(props) {
-
+console.log("props")
+console.log(props);
    var image = {
      OutdoorImg: OutdoorImg,
      ArtImg: ArtImg, 
@@ -122,7 +123,7 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
             <div className="sign-up-btn">
             <Button
               href="#"
-              onClick={()=>api.eventSignUp(props._id)}
+              onClick={()=>api.eventSignUp(props.id)}
             >
               Sign Up!
             </Button>
