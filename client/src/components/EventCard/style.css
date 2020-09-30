@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-.page-wrapper {
-  margin: 100%;
-}
-
-.card-element{
-  height: 100%;
-  width: 100%
+.card-deck{
+  flex-wrap: wrap;
+  
 }
 
 .event-card {
@@ -24,11 +20,15 @@
     font-size: 32px;
     letter-spacing: 2pt;
     color:#110338;
+    align-content: center;
+    width: auto;
 }
 
 .event-description {
   font-size: 14pt;
   color:#110338;
+  align-content: center;
+  margin: auto;
 }
 
 .event-date, .event-time, .event-location {
@@ -37,12 +37,15 @@
   text-align: left;
 }
 
-
 .sign-up-btn {
   position: absolute; 
   bottom: 20px;
   right: 20px;
   
+}
+
+.event-details {
+  height: auto;
 }
 
 .card-img{

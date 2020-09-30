@@ -36,14 +36,14 @@ function CreateEventForm(props) {
 function handleFormSubmit(event) {
   event.preventDefault();
 
-  if (formObject.eventName && formObject.location && formObject.description && formObject.category) {
+  if (formObject.eventName) {
     API.createEventForm({
       eventName: formObject.eventName,
       location: formObject.location,
       description: formObject.description,
       date: formObject.date,
       time: formObject.time,
-      category:  formObject.category,
+      category: formObject.category,
       host: formObject.host
     })
       .then(() => {
@@ -70,9 +70,14 @@ function handleFormSubmit(event) {
         <Input name="eventName" id="name"onChange={handleInputChange} />
       </FormGroup >
       <FormGroup className="form-header">
+        <Label  for="host-name">Host Name</Label>
+        <Input name="host" id="host-name"onChange={handleInputChange} />
+      </FormGroup >
+      <FormGroup className="form-header">
         <Label >Select Event Category</Label>
         <Col md={20}>
-          <Input type="select" name="category" id="event-category" onChange={handleInputChange}>
+          <Input type="select" name="category" id="category" onChange={handleInputChange}>
+           <option>Select a Category</option>
             <option>Outdoors &amp; Adventure</option>
             <option>Health &amp; Wellness</option>
             <option>Photography</option>
@@ -125,7 +130,7 @@ function handleFormSubmit(event) {
       </FormGroup>
       <div className="flex-column create-event-btn">
       <Button 
-      disabled={!(formObject.eventName)}
+      // disabled={!(formObject.eventName)}
       onClick={handleFormSubmit} >
         Submit
       </Button>

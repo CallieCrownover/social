@@ -24,9 +24,10 @@ const [events, setEvents] = useState([]);
     <div>
     <Jumbotron className="jumbo"/>
     <NavMenu />
-    <div className="d-flex justify-content-around">
+    <div className="container">
+      <div className="row">
     {events.map(event => (
-          <div className="d-flex justify-content-around">
+          <div className="col-md-4">
           <EventCard
             id={event._id}
             key={event._id}
@@ -37,8 +38,9 @@ const [events, setEvents] = useState([]);
             date={event.date}
             time={event.time}
           />
-          </div>
+         </div>
     ))}
+    </div>
     </div>
     </div>
   )

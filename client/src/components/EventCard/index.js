@@ -87,8 +87,7 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
     console.log(props.category)
 
     return (
-      <div className="page-wrapper">
-      <div className="card-element card-deck">
+      <div className="card-element card-deck h-100 py-2">
         <Card style={style} className="card event-card">
           <div className="event-image">
           <CardImg
@@ -99,6 +98,7 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
           </div>
           <CardBody>
             <CardTitle className="event-title d-inline-flex">{props.name}</CardTitle>
+            <div className= "event-details">
             <CardText>
               <p className="event-description">
               {props.description}
@@ -119,6 +119,7 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
               {props.time}
               </p>
             </CardText>
+            </div>
             <div className="sign-up-btn">
             <Button
               href="#"
@@ -129,7 +130,6 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
             </div>
           </CardBody>
         </Card>
-      </div>
       </div>
     );
   }
