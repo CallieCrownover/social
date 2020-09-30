@@ -1,11 +1,10 @@
 import React from "react"; 
 import {
-    Button, Card, CardBody, CardImg, CardTitle,CardText,
+    Button, Card, CardBody, CardImg, CardTitle,CardText, Dropdown, Media, DropdownToggle, DropdownMenu, DropdownItem
   } from "reactstrap";
 import "./style.css";
 import api from "../../utils/API";
-
-import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"; 
+import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"
 import ArtImg from "../../assets/images/art-events-stock-photo.jpg"; 
 import BookImg from "../../assets/images/book-club-stock-photo.jpg"; 
 import FamilyImg from "../../assets/images/family-stock-photo.jpg"; 
@@ -21,7 +20,8 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
   const style = { width: "25rem" };
   
   function EventCard(props) {
-
+console.log("props")
+console.log(props);
    var image = {
      OutdoorImg: OutdoorImg,
      ArtImg: ArtImg, 
@@ -123,7 +123,7 @@ import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
             <div className="sign-up-btn">
             <Button
               href="#"
-              onClick={()=>api.eventSignUp(props._id)}
+              onClick={()=>api.eventSignUp(props.id)}
             >
               Sign Up!
             </Button>
