@@ -49,7 +49,7 @@ function handleFormSubmit(event) {
       <h2 className="login-h2">Log In</h2>
         <Col>
           <FormGroup className="login-input rounded">
-            <Label>Email</Label>
+            <Label className="label">Email</Label>
             <Input className="login-input"
               onChange={handleInputChange}
               type="email"
@@ -61,7 +61,7 @@ function handleFormSubmit(event) {
         </Col>
         <Col>
           <FormGroup className="login-input rounded">
-            <Label for="examplePassword">Password</Label>
+            <Label className="label" for="examplePassword">Password</Label>
             <Input className="login-input"
               onChange={handleInputChange}
               type="password"

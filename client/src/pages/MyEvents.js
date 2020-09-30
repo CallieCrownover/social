@@ -11,7 +11,7 @@ import NavMenu from "../components/NavBar";
 function MyEvents() {
 
   const [myEvents, setMyEvents]=useState(true)
-  const [buttonName , setButtonName] = useState("Go to my events")
+  const [buttonName , setButtonName] = useState("Go to My Hosted Events")
   const [myCreatedEvents, setMyCreatedEvents]=useState()
 
   function handleClick(){
@@ -20,14 +20,14 @@ function MyEvents() {
 
     }else if (myEvents ===false){
       setMyEvents(true)
-      setButtonName("Go to events I'm hosting")
+      setButtonName("Go to My Hosted Events")
     }
     if(myEvents ===false){
       setMyEvents(true)
 
     }else if (myEvents ===true){
       setMyEvents(false)
-      setButtonName("Go to my upcoming events")
+      setButtonName("Go to Events to Attend")
         }
 
   }

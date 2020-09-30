@@ -64,35 +64,36 @@ function SignUpForm(props) {
             </Col> */}
 
             <div class="align-self-center">
-              {/* <p className="or-p">OR</p> */}
-              <Col className="column">
-                <FormGroup className="signup-input rounded">
-                  <Label>Email</Label>
-                  <Input
-                    className="login-input"
-                    onChange={handleInputChange}
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
-                    placeholder="myemail@email.com"
-                  />
-                </FormGroup>
-              </Col>
-              <Col className="column">
-                <FormGroup className="signup-input rounded">
-                  <Label for="examplePassword">Create a Password</Label>
-                  <Input
-                    className="login-input"
-                    onChange={handleInputChange}
-                    type="password"
-                    name="password"
-                    id="examplePassword"
-                    placeholder="********"
-                  />
-                </FormGroup>
-              </Col>
-            </div>
-          </Form>
+            {/* <p className="or-p">OR</p> */}
+            <Col className="column">
+              <FormGroup className="signup-input rounded">
+                <Label className="label">Email</Label>
+                <Input className="login-input"
+                  onChange={handleInputChange}
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="myemail@email.com"
+                />
+              </FormGroup>
+            </Col>
+            <Col className="column">
+              <FormGroup className="signup-input rounded">
+                <Label className="label" for="examplePassword">Create a Password</Label>
+                <Input className="login-input"
+                  onChange={handleInputChange}
+                  type="password"
+                  name="password"
+                  id="examplePassword"
+                  placeholder="********"
+                />
+              </FormGroup>
+            </Col>
+            
+              
+           </div>
+          
+        </Form>
 
           <Button
             color="light alert"
