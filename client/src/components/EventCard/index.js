@@ -88,8 +88,7 @@ console.log(props);
     console.log(props.category)
 
     return (
-      <div className="page-wrapper">
-      <div className="card-element card-deck">
+      <div className="card-element card-deck h-100 py-2">
         <Card style={style} className="card event-card">
           <div className="event-image">
           <CardImg
@@ -100,6 +99,7 @@ console.log(props);
           </div>
           <CardBody>
             <CardTitle className="event-title d-inline-flex">{props.name}</CardTitle>
+            <div className= "event-details">
             <CardText>
               <p className="event-description">
               {props.description}
@@ -120,6 +120,7 @@ console.log(props);
               {props.time}
               </p>
             </CardText>
+            </div>
             <div className="sign-up-btn">
             <Button
               href="#"
@@ -130,7 +131,6 @@ console.log(props);
             </div>
           </CardBody>
         </Card>
-      </div>
       </div>
     );
   }
