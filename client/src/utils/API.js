@@ -9,7 +9,16 @@ export default {
   },
 
   eventSignUp: function(eventId){
-    return axios.get("/api/eventSignUp/" + eventId)
+    console.log("eventId")
+    console.log(eventId)
+    console.log('session storage')
+    let userId = sessionStorage.getItem("id")
+    console.log(userId)
+let data ={
+  eventId:eventId,
+  userId:userId
+}
+    return axios.post("/api/eventSignUp/",data)
   },
   // getTestEvents: function(){
   //   return axios.get("/api/getAllEvents")
