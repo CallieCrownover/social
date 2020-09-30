@@ -1,0 +1,29 @@
+.event-div {
+    width: 850px;
+    background-color: rgb(213, 229, 248);
+    margin-left: 320px;
+    display: flex;
+    justify-content: center;
+    padding-right: 150px;
+}
+
+.media {
+    width: 700px;
+    margin-right: 20px;
+}
+
+.main {
+    width: 100%;
+}
+
+.attending-dropdown > button {
+    width:120px;
+    margin-bottom: 30px;
+    background-color: rgb(122, 91, 233);
+    color: black;
+    font-size: 15px;
+}
+
+.attending-dropdown > button:hover {
+    background-color: rgb(173, 255, 47);
+}

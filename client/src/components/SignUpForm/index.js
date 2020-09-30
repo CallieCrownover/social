@@ -69,7 +69,7 @@ function handleFormSubmit(event) {
             {/* <p className="or-p">OR</p> */}
             <Col className="column">
               <FormGroup className="signup-input rounded">
-                <Label>Email</Label>
+                <Label className="label">Email</Label>
                 <Input className="login-input"
                   onChange={handleInputChange}
                   type="email"
@@ -81,7 +81,7 @@ function handleFormSubmit(event) {
             </Col>
             <Col className="column">
               <FormGroup className="signup-input rounded">
-                <Label for="examplePassword">Create a Password</Label>
+                <Label className="label" for="examplePassword">Create a Password</Label>
                 <Input className="login-input"
                   onChange={handleInputChange}
                   type="password"

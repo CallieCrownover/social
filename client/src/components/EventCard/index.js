@@ -4,9 +4,6 @@ import {
   } from "reactstrap";
 import "./style.css";
 import api from "../../utils/API";
-import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"
-  
-  const style = { width: "25rem" };
 
 import OutdoorImg from "../../assets/images/outdoor-events-stock-photo.jpg"; 
 import ArtImg from "../../assets/images/art-events-stock-photo.jpg"; 

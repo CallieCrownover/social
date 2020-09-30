@@ -1,7 +1,7 @@
 import React from "react"; 
 import "./style.css";
 import { Container } from 'reactstrap';
-// import MyHostedEvents from "../MyHostedEvents"
+import MyHostedEvents from "../MyHostedEvents"
 
 const MyEvents = (props) => {
 
@@ -9,10 +9,7 @@ const MyEvents = (props) => {
   return (
       <Container>
         <div>
-        <h1>My Hosted Events</h1>  
-        </div>
-        <div>
-          {/* <MyHostedEvents /> */}
+          <MyHostedEvents />
         </div>
       </Container>
   );
