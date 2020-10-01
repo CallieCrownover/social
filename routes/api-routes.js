@@ -40,10 +40,22 @@ router.post("/api/eventSignUp", (req, res) => {
   console.log(eventId)
   console.log("user below")
   console.log(userId)
-db.Event.findOneAndUpdate({category: "Not Axe Throwing"},{$push:{participants:"Axe Throwing"}}, {upsert: true}).then(response=>{
-    console.log("please work")
-    console.log(response)
-})
+db.Event.findOneAndUpdate(eventId,{$push:{participants:userId}},   
+  function (error, success) {
+  if (error) {
+      console.log(error);
+  } else {
+      console.log(success);
+  }
+});
+// db.User.findOneAndUpdate(userId, {$push:{events:eventId}}
+//   function (error, success) {
+//     if (error) {
+//       console.log(error);
+//   } else {
+//       console.log(success);
+//   }
+//   })
 });
 
 router.post("/api/createform", (req, res) => {
