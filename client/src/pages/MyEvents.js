@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Jumbotron from "../components/Jumbotron"; 
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
 import NavMenu from "../components/NavBar";
-// import API from "../utils/API";
-
+import API from "../utils/API";
 
 
 function MyEvents() {
@@ -13,12 +12,24 @@ function MyEvents() {
   const [myEvents, setMyEvents]=useState(true)
   const [buttonName , setButtonName] = useState("Go to My Hosted Events")
   const [myCreatedEvents, setMyCreatedEvents]=useState()
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    loadMyEvents()
+  }, []);
+
+function loadMyEvents () {
+  const res = API.getMyEvents().then(results=>{
+    console.log(results.data);
+    console.log(res);
+    setEvents(results.data)
+  });
+}
 
   function handleClick(){
-    if(myEvents ===true){
+    if(myEvents === true){
       setMyEvents(false)
 
-    }else if (myEvents ===false){
+    }else if (myEvents === false){
       setMyEvents(true)
       setButtonName("Go to My Hosted Events")
     }
@@ -31,6 +42,8 @@ function MyEvents() {
         }
 
   }
+
+  
 // function to load events the user has signed up for. will uncomment and test once the user and events table are
   // useEffect(() => {
   //   loadMyEvents()
@@ -54,7 +67,23 @@ function MyEvents() {
        
        <div className="event-div"> 
        {/* passing my events and createdEvents down as props */}
-       {myEvents?<MyUpcomingEvents myEvents={myEvents} />:<MyEventsList createdEvents={myCreatedEvents} />}
+       {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
+
+       {events.map(event => (
+          <div className="col-md-4">
+          <MyEventsList
+            id={event._id}
+            key={event._id}
+            name={event.eventName}
+            category={event.category}
+            location={event.location}
+            description={event.description}
+            date={event.date}
+            time={event.time}
+          />
+         </div>
+    ))
+       }
        </div>
        
      </div>
