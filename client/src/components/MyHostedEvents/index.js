@@ -89,10 +89,11 @@ const MyHostedEvents = (props) => {
       <Container>
         
       <div >
-        <h1 className="d-flex justify-content-center"> My Hosted Events</h1>
+        <h1 className="d-flex justify-content-center host rounded"> My Hosted Events</h1>
         <hr></hr>
       </div>
-      <div className="media">
+      <div className="media-main">
+      <div className="media" className="d-flex justify-content-center rounded">
         
       <Media list>
         <Media tag="li">
@@ -108,11 +109,8 @@ const MyHostedEvents = (props) => {
             </Media>
           </Media>
         </Media>
-      </Media>
-      
-      </div>
-  
-      <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
+
+        <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
         <DropdownToggle caret id="navBtn">
           Attendees
           </DropdownToggle>
@@ -124,7 +122,10 @@ const MyHostedEvents = (props) => {
           <DropdownItem href="">5</DropdownItem>
          </DropdownMenu>
       </Dropdown>
-
+      </Media>
+      
+      </div>
+      </div>
       </Container>
       </div>
     );

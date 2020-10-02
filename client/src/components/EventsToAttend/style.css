@@ -1,5 +1,5 @@
 .event-div {
-    width: 850px;
+    width: 670px;
     background-color: rgb(213, 229, 248);
     margin-left: 320px;
     display: flex;
@@ -16,9 +16,14 @@
     width: 100%;
 }
 
+.d-flex {
+    margin-right: 170px;
+}
+
 .attending-dropdown > button {
     width:120px;
     margin-bottom: 30px;
+    margin-left: 90px;
     background-color: rgb(122, 91, 233);
     color: black;
     font-size: 15px;
@@ -26,4 +31,9 @@
 
 .attending-dropdown > button:hover {
     background-color: rgb(173, 255, 47);
+}
+
+.attendees-btn {
+    width: 1000px;
+    padding-right: 900px;
 }

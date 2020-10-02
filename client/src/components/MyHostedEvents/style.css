@@ -1,5 +1,5 @@
 .event-div {
-    width: 850px;
+    width: 670px;
     background-color: rgb(213, 229, 248);
     margin-left: 320px;
     display: flex;
@@ -7,9 +7,18 @@
     padding-right: 150px;
 }
 
-.media {
+.media > li {
     width: 700px;
-    margin-right: 20px;
+    margin-right: 10px;
+}
+
+.d-flex {
+    margin-right: 170px;
+}
+
+.host {
+    width: 370px;
+    padding-right: 20px;
 }
 
 .main {
@@ -19,6 +28,7 @@
 .attending-dropdown > button {
     width:120px;
     margin-bottom: 30px;
+    margin-left: 90px;
     background-color: rgb(122, 91, 233);
     color: black;
     font-size: 15px;
