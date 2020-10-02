@@ -20,7 +20,7 @@ const NavMenu = (props) => {
       <DropdownItem href="/create">Create an Event</DropdownItem>
         <DropdownItem href="/events">All Events</DropdownItem>
         <DropdownItem href="/myevents">Events I'm Hosting</DropdownItem>
-        <DropdownItem href="/myevents">My Upcoming Events</DropdownItem>
+        <DropdownItem href="/myevents">Events to Attend</DropdownItem>
         <DropdownItem href="/">Logout</DropdownItem>
        </DropdownMenu>
     </Dropdown>
