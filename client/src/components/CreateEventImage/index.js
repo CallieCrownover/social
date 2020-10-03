@@ -6,7 +6,7 @@ return(
     <div className="container">
     <img className = "image" src={image} alt="Social-Event"></img>
     <div className="content header-text d-flex justify-content-center">
-    <h1>Ready to Host the Next Great Event?</h1>
+    <h1>Ready to Host the Next Social Event?</h1>
     </div>
     </div>
 

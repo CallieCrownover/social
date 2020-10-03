@@ -1,16 +1,15 @@
 import React from "react"; 
 import "./style.css"; 
 
-function EventsHeader() {
+function CreateEventHeader() {
   return(
   <div>
       <h1 className="header-text">
-          Discover Your Next Social Event!
+          Create an Event
       </h1>
       <hr></hr>
   </div>
   )
 }; 
 
-export default EventsHeader; 
-
+export default CreateEventHeader; 
