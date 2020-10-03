@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { Container, Media, Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap';
 import EventsToAttend from "../EventsToAttend";
+import MyEvents from "../../pages/MyEvents";
 // import EventsToAttend from "../EventsToAttend"
 
 
@@ -14,7 +15,19 @@ const MyUpcomingEvents = (props) => {
   return (
     <Container>
     <div>
-      <EventsToAttend />
+      {props.events.map(event => (
+        <div>
+        <EventsToAttend 
+          id={event.id}
+          name={event.eventName}
+          category={event.category}
+          location={event.location}
+          description={event.description}
+          date={event.date}
+          time={event.time}
+        />
+        </div>
+      ))}
     </div>
   </Container>
   );

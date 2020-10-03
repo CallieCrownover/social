@@ -32,20 +32,20 @@ router.get("/api/getAllEvents", (req, res) => {
   });
 });
 
-router.get("/api/getMyEvents", (req, res) => {
-  console.log("made it to get My Events");
-  db.Event.findById({_id === participants}, 
-    function (error, success) {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log(success);
-    }
-    console.log("db response");
-    console.log(MyEvents);
-    res.json(MyEvents);
-  });
-});
+// router.get("/api/getMyEvents", (req, res) => {
+//   console.log("made it to get My Events");
+//   db.Event.findById({_id === participants}, 
+//     function (error, success) {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(success);
+//     }
+//     console.log("db response");
+//     console.log(MyEvents);
+//     res.json(MyEvents);
+//   });
+// });
 
 router.post("/api/eventSignUp", (req, res) => {
   const eventId = req.body.eventId;

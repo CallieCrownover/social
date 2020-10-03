@@ -16,7 +16,8 @@ import SportsFitnessImg from "../../assets/images/sports-fitness-stock-photo.jpg
 import TechImg from "../../assets/images/tech-stock-photo.jpg"; 
 import OtherImg from "../../assets/images/socialLogo_vectorBlack.svg"; 
 import AxeImg from "../../assets/images/axe-throwing-stock-image.jpg"
-  
+import Moment from "moment";
+
   const style = { width: "25rem" };
   
   function EventCard(props) {
@@ -112,12 +113,14 @@ console.log(props);
             </CardText>
             <CardText>
               <p className="event-date">
-              {props.date}
+              {/* {props.date} = {""} */}
+              {Moment(props.date).format("MMM Do YYYY")} {""}
               </p>
             </CardText>
             <CardText>
               <p className="event-time">
               {props.time}
+              {/* {Moment(props.time).fromNow()}  */}
               </p>
             </CardText>
             </div>

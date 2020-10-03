@@ -102,9 +102,18 @@ const MyHostedEvents = (props) => {
           </Media>
           <Media body>
             <Media heading>
-              Media heading
+              {props.name}
             </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            {props.description}
+            <Media>
+            </Media>
+            {props.location}
+            <Media>
+            </Media>
+            {props.date}
+            <Media>
+            </Media>
+            {props.time}
             <Media>
             </Media>
           </Media>
