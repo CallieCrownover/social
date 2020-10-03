@@ -8,7 +8,6 @@ function CreateEvent() {
   return(
     <div>
       <Jumbotron className="jumbo" />
-      <NavMenu />
     <div className="d-flex flex-row justify-content-center pt-5">
       <div className="p-6">
         <CreateEventImage />

@@ -4,12 +4,11 @@
   rgb(122, 91, 233) 30%,
   rgb(122, 91, 233) 70%);
   height: 175px;
-  color: rgb(45, 238, 45);
 }
 
 .logo {
     width: 300px;
-    padding-bottom: 30px;
+    padding-bottom: 230px;
 }
 
 .container-full-bg {

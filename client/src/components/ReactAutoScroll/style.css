@@ -28,9 +28,10 @@
   .event-name {
     background-color: rgb(216, 218, 219);
     opacity: 0.6;
-    color: rgb(3, 26, 233);
+    color: rgb(2, 12, 102);
     font-weight: bolder;
     font-size: 60px;
+    font-family: 'Salsa', cursive;
   }
 
   .descript {
@@ -38,7 +39,7 @@
     opacity: 0.6;
     color: black;
     font-weight: bolder;
-    font-size: 20px;;
+    font-size: 25px;;
   }
 
  

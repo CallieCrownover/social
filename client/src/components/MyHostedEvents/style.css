@@ -1,10 +1,12 @@
+
 .event-div {
     width: 670px;
     background-color: rgb(213, 229, 248);
     margin-left: 320px;
     display: flex;
     justify-content: center;
-    padding-right: 150px;
+    padding-right: 130px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .media > li {
@@ -17,7 +19,7 @@
 }
 
 .host {
-    width: 370px;
+    width: 390px;
     padding-right: 20px;
 }
 

@@ -59,7 +59,7 @@ function loadMyEvents () {
    return(
     <div>
      <Jumbotron className="jumbo" />
-     <NavMenu />
+     
      <div className="button-div rounded">
        <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
        </div>
@@ -67,9 +67,10 @@ function loadMyEvents () {
        
        <div className="event-div"> 
        {/* passing my events and createdEvents down as props */}
+       {myEvents?<MyUpcomingEvents myEvents={myEvents} />:<MyEventsList createdEvents={myCreatedEvents} />}
        {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-       {events.map(event => (
+       {/* {events.map(event => (
           <div className="col-md-4">
           <MyEventsList
             id={event._id}
@@ -83,7 +84,7 @@ function loadMyEvents () {
           />
          </div>
     ))
-       }
+       } */}
        </div>
        
      </div>
