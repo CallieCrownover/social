@@ -1,6 +1,6 @@
 
 import React, {useState} from 'react';
-import { Button, Form, FormGroup, Label, Input, Col} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Col, Modal, ModalBody, ModalFooter} from 'reactstrap';
 import "./style.css";
 import API from "../../utils/API"
 
@@ -24,17 +24,19 @@ import API from "../../utils/API"
 function CreateEventForm(props) {
   // const history = useHistory()
   // const [event, setEvent] = useState([])
-  const [formObject, setFormObject] = useState({})
+  const [formObject, setFormObject] = useState({}); 
+  const [modal, setModal] = useState(false); 
+  const toggle = () => setModal(!modal); 
 
  function handleInputChange(event) {
   const { name, value } = event.target;
-  console.log(value)
   setFormObject({...formObject, [name]: value})
 };
 
 // When the form is submitted, use the API.createEventForm method to save the user's event
 function handleFormSubmit(event) {
   event.preventDefault();
+  toggle()
 
   if (formObject.eventName) {
     API.createEventForm({
@@ -58,21 +60,23 @@ function handleFormSubmit(event) {
 
 
   return (
-    <div className="create-event-form flex-row">
-
-      
-
+    <div className="create-event-form">
     <Form>
       <div className="form-elements">
-      <div className="flex-column">
+      <div className="row">
+        <div className="col-md-4">
       <FormGroup className="form-header">
         <Label  for="event-name">Event Name</Label>
         <Input name="eventName" id="name"onChange={handleInputChange} />
       </FormGroup >
+      </div>
+      <div className="col-md-4">
       <FormGroup className="form-header">
         <Label  for="host-name">Host Name</Label>
         <Input name="host" id="host-name"onChange={handleInputChange} />
       </FormGroup >
+      </div>
+      <div className="col-md-4">
       <FormGroup className="form-header">
         <Label >Select Event Category</Label>
         <Col md={20}>
@@ -93,13 +97,15 @@ function handleFormSubmit(event) {
         </Col>
       </FormGroup>
       </div>
-      <div className="flex-column">
+      </div>
+      <div className="row">
+      <div className="col-md-4">
       <FormGroup className="form-header">
         <Label for="event-location">Event Location</Label>
         <Input name="location" id="location" onChange={handleInputChange}/>
       </FormGroup>
       </div>
-      <div className="flex-column">
+      <div className="col-md-4">
       <FormGroup className="form-header">
         <Label for="exampleDate">Date</Label>
         <Input
@@ -111,7 +117,7 @@ function handleFormSubmit(event) {
         />
       </FormGroup>
       </div>
-      <div className="flex-column">
+      <div className="col-md-4">
       <FormGroup className="form-header">
         <Label for="exampleTime">Time</Label>
         <Input
@@ -123,17 +129,27 @@ function handleFormSubmit(event) {
         />
       </FormGroup>
       </div>
-      <div className="flex-column">
+      </div>
+      <div className="row">
+      <div className="col-md-12">
       <FormGroup className="form-header">
         <Label for="description">Briefly describe the event</Label>
         <Input type="textarea" name="description" id="event-description" onChange={handleInputChange}/>
       </FormGroup>
-      <div className="flex-column create-event-btn">
-      <Button 
-      // disabled={!(formObject.eventName)}
-      onClick={handleFormSubmit} >
-        Submit
-      </Button>
+      </div>
+      <div className="create-event-btn mx-auto text-center">
+      {/* Reactstrap Modal Example Code */}
+      <div>
+      <Button onClick={handleFormSubmit}>Submit</Button>
+      <Modal isOpen={modal} toggle={toggle}>
+        <ModalBody className="event-created-alert">
+         Your event has been created!
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={toggle}>Close</Button>{' '}
+        </ModalFooter>
+      </Modal>
+    </div>
       </div>
       </div>
       </div>

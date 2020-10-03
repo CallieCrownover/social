@@ -9,7 +9,7 @@ const eventSchema = new Schema({
   date: { type: String, required: true },
   time: { type: String, required: true },
   category: { type: String, required: true },
-  host: { type: Schema.Types.ObjectId, ref: "User" },
+  host: { type: String, ref:"User" },
   participants: [{ type: Array, ref: "User" }]
 });
 //table in the database
