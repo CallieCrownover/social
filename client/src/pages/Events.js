@@ -23,7 +23,6 @@ const [events, setEvents] = useState([]);
   return(
     <div>
     <Jumbotron className="jumbo"/>
-    <NavMenu />
     <div className="container">
       <div className="row">
       <div className="col-md-12">

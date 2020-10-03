@@ -28,15 +28,15 @@ const items = [
   {
     src: '../assets/image/dogPark.png',
     altText: 'Slide 4',
-    caption: <p className="descript rounded">.</p>,
+    caption: <p className="descript rounded">Bark, Beer and Boos!</p>,
     header: <h1 className="event-name rounded">Barktoberfest</h1>,
     key: '4'
   },
   {
     src: '../assets/image/Bowling.png',
     altText: 'Slide 5',
-    caption: <p className="descript rounded">.</p>,
-    header: <h1 className="event-name rounded">Bowling Bash</h1>,
+    caption: <p className="descript rounded">Split Happens!</p>,
+    header: <h1 className="event-name rounded">Big League Bowling Bash</h1>,
     key: '5'
   },
 ];

@@ -63,7 +63,7 @@ function SignUpForm(props) {
                 </FormGroup>
             </Col> */}
 
-            <div class="align-self-center">
+            <div className="align-self-center">
             {/* <p className="or-p">OR</p> */}
             <Col className="column">
               <FormGroup className="signup-input rounded">

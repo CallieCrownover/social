@@ -9,6 +9,7 @@ function CreateEvent() {
   return(
     <div>
       <Jumbotron className="jumbo" />
+
       <NavMenu />
       <div className="container">
       <div className="row">
