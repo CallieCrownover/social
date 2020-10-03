@@ -3,7 +3,7 @@ import EventCard from "../components/EventCard";
 import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
-
+import EventsHeader from "../components/EventsHeader"
 function Event() {
 
 const [events, setEvents] = useState([]);
@@ -25,6 +25,11 @@ const [events, setEvents] = useState([]);
     <Jumbotron className="jumbo"/>
     <NavMenu />
     <div className="container">
+      <div className="row">
+      <div className="col-md-12">
+      <EventsHeader />
+      </div>
+      </div>
       <div className="row">
     {events.map(event => (
           <div className="col-md-4">

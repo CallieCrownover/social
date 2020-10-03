@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 .create-event-form {
-    padding: 10%;
-    text-align: center; 
-    margin: auto;
     font-family: 'Quicksand', sans-serif;
+    width: auto;
+    background-color: rgb(213, 229, 248);
+    border-radius: 10px;
+    align-self: center;
+    padding: 25px;
+    border-color: black, 5px;
+    margin-top: -11px;
 }
 
 .create-event-btn {
-    padding: 10%; 
     position: relative;
-    margin-left: 0%;
+    margin-bottom: 0%;
 }
 
 .form-header {
     background-color: transparent;
     height: 20%; 
-    color: white;
+    color: black;
 }
 
 .form-elements {
-    background-color: #C4C3D0;
-    width: 200%; 
-    padding: 20%;
+    padding: 24px;
     border-radius: 50px;
+}
+
+.event-created-alert {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+    background-color: F2F2F2
 }
