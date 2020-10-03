@@ -30,8 +30,8 @@ let data ={
     return axios.post("/api/createform", user)
   }, 
   
-  getMyEvents: function(user) {
-    return axios.get("/api/getMyEvents")
+  getMyEvents: function(event) {
+    return axios.get("/api/getMyEvents", event)
   }
 }
 

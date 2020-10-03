@@ -7,6 +7,7 @@ import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 
 
+
 function MyEvents() {
 
   const [myEvents, setMyEvents]=useState(true)
@@ -26,10 +27,10 @@ function loadMyEvents () {
 }
 
   function handleClick(){
-    if(myEvents === true){
+    if(myEvents ===true){
       setMyEvents(false)
 
-    }else if (myEvents === false){
+    }else if (myEvents ===false){
       setMyEvents(true)
       setButtonName("Go to My Hosted Events")
     }
@@ -42,8 +43,6 @@ function loadMyEvents () {
         }
 
   }
-
-  
 // function to load events the user has signed up for. will uncomment and test once the user and events table are
   // useEffect(() => {
   //   loadMyEvents()
@@ -67,9 +66,9 @@ function loadMyEvents () {
        
        <div className="event-div"> 
        {/* passing my events and createdEvents down as props */}
-       {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
+        {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-       {events.map(event => (
+        {events.map(event => (
           <div className="col-md-4">
           <MyEventsList
             id={event._id}
@@ -84,6 +83,7 @@ function loadMyEvents () {
          </div>
     ))
        }
+       
        </div>
        
      </div>
