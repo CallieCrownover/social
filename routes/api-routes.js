@@ -32,6 +32,7 @@ router.get("/api/getAllEvents", (req, res) => {
   });
 });
 
+
 // router.get("/api/getMyEvents", (req, res) => {
 //   console.log("made it to get My Events");
 //   db.Event.findById({_id === participants}, 
@@ -47,6 +48,7 @@ router.get("/api/getAllEvents", (req, res) => {
 //   });
 // });
 
+
 router.post("/api/eventSignUp", (req, res) => {
   const eventId = req.body.eventId;
   let userId = req.body.userId
@@ -55,7 +57,7 @@ router.post("/api/eventSignUp", (req, res) => {
   console.log(eventId)
   console.log("user below")
   console.log(userId)
-db.Event.findOneAndUpdate(eventId,{$push:{participants:userId}},   
+db.Event.findOneAndUpdate({_id:eventId},{$push:{participants:userId}},   
   function (error, success) {
   if (error) {
       console.log(error);
@@ -95,6 +97,25 @@ router.post("/api/createform", (req, res) => {
     });
 });
 
+router.get("/api/getMyEvents", (req, res) => {
+  let userId = sessionStorage.getItem("id");
 
+  console.log("made it to get My Events");
+  console.log(userId);
+
+  db.Event.find().then((allEvents) => {
+    let newArray = allEvents.filter(event => {
+      let match = false;
+      event.participants.map(participant => {
+        if (participant === userId){
+          match=true
+        }
+        if(match === true){
+          return event;
+        }
+      })
+    })
+  });
+});
 
 module.exports = router;

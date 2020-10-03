@@ -7,29 +7,46 @@ import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 
 
+
 function MyEvents() {
 
   const [myEvents, setMyEvents]=useState(true)
   const [buttonName , setButtonName] = useState("Go to My Hosted Events")
-  const [myCreatedEvents, setMyCreatedEvents]=useState()
+  const [myCreatedEvents, setMyCreatedEvents]=useState([])
   const [events, setEvents] = useState([]);
   useEffect(() => {
     loadMyEvents()
   }, []);
 
+// loading events using API call to the database
+// function loadMyEvents () {
+//   const res = API.getMyEvents().then(results=>{
+//     console.log(results.data);
+//     console.log(res);
+//     setEvents(results.data)
+//   });
+// }
+
+// function to test prop drilling without doing API call to the database 
+const testData =[{
+  id :"1",
+  eventName: "test",
+  category: "testCategory",
+  description: "testDescription",
+  date: "October 3, 2020",
+  time: "5:00pm", 
+  location: "testLocation"
+}] 
 function loadMyEvents () {
-  const res = API.getMyEvents().then(results=>{
-    console.log(results.data);
-    console.log(res);
-    setEvents(results.data)
-  });
+  setEvents(testData)
+  setMyCreatedEvents(testData)
 }
 
   function handleClick(){
-    if(myEvents === true){
+    if(myEvents ===true){
       setMyEvents(false)
 
-    }else if (myEvents === false){
+    }else if (myEvents ===false){
       setMyEvents(true)
       setButtonName("Go to My Hosted Events")
     }
@@ -42,8 +59,6 @@ function loadMyEvents () {
         }
 
   }
-
-  
 // function to load events the user has signed up for. will uncomment and test once the user and events table are
   // useEffect(() => {
   //   loadMyEvents()
@@ -67,24 +82,26 @@ function loadMyEvents () {
        
        <div className="event-div"> 
        {/* passing my events and createdEvents down as props */}
-       {myEvents?<MyUpcomingEvents myEvents={myEvents} />:<MyEventsList createdEvents={myCreatedEvents} />}
-       {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-       {/* {events.map(event => (
-          <div className="col-md-4">
-          <MyEventsList
-            id={event._id}
-            key={event._id}
-            name={event.eventName}
-            category={event.category}
-            location={event.location}
-            description={event.description}
-            date={event.date}
-            time={event.time}
-          />
-         </div>
-    ))
-       } */}
+       {myEvents?< MyUpcomingEvents events={events} />: < MyEventsList myCreatedEvents={myCreatedEvents} />
+
+       /* {events.map(event => ( */
+        //   <div className="col-md-4">
+        //   <MyEventsList
+        //     id={event._id}
+        //     key={event._id}
+        //     name={event.eventName}
+        //     category={event.category}
+        //     location={event.location}
+        //     description={event.description}
+        //     date={event.date}
+        //     time={event.time}
+        //   />
+        //  </div>
+    // ))
+
+       }
+       
        </div>
        
      </div>
