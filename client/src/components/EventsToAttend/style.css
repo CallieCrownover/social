@@ -20,6 +20,11 @@
     margin-right: 170px;
 }
 
+.attend {
+    width: 390px;
+    padding-right: 50px;
+}
+
 .attending-dropdown > button {
     width:120px;
     margin-bottom: 30px;

@@ -89,7 +89,7 @@ const EventsToAttend = (props) => {
       <Container >
         
       <div >
-        <h1 className="d-flex justify-content-center rounded">Events to Attend</h1>
+        <h1 className="d-flex justify-content-center attend rounded">Events to Attend</h1>
         <hr></hr>
       </div>
       <div className="media-main" >
@@ -102,9 +102,18 @@ const EventsToAttend = (props) => {
           </Media>
           <Media body>
             <Media heading>
-              Media heading
+              {props.name}
             </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+           {props.description}
+            <Media>
+            </Media>
+            {props.date}
+            <Media>
+            </Media>
+            {props.time}
+            <Media>
+            </Media>
+            {props.location}
             <Media>
             </Media>
           </Media>
