@@ -2,7 +2,8 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const router = require("express").Router();
-const mongojs = require("mongojs")
+const mongojs = require("mongojs");
+const sessionStorage = require('express-session');
 
 // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
 // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,

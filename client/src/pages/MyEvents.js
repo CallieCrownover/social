@@ -3,7 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
-import NavMenu from "../components/NavBar";
+// import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 
 
@@ -19,28 +19,29 @@ function MyEvents() {
   }, []);
 
 // loading events using API call to the database
-// function loadMyEvents () {
-//   const res = API.getMyEvents().then(results=>{
-//     console.log(results.data);
-//     console.log(res);
-//     setEvents(results.data)
-//   });
-// }
+function loadMyEvents () {
+  const res = API.getMyEvents().then(results=>{
+    console.log(results.data);
+    console.log(res);
+    setEvents(results.data)
+    setMyCreatedEvents(results.data)
+  });
+}
 
 // function to test prop drilling without doing API call to the database 
-const testData =[{
-  id :"1",
-  eventName: "test",
-  category: "testCategory",
-  description: "testDescription",
-  date: "October 3, 2020",
-  time: "5:00pm", 
-  location: "testLocation"
-}] 
-function loadMyEvents () {
-  setEvents(testData)
-  setMyCreatedEvents(testData)
-}
+// const testData =[{
+//   id :"1",
+//   eventName: "test",
+//   category: "testCategory",
+//   description: "testDescription",
+//   date: "October 3, 2020",
+//   time: "5:00pm", 
+//   location: "testLocation"
+// }] 
+// function loadMyEvents () {
+//   setEvents(testData)
+//   setMyCreatedEvents(testData)
+// }
 
   function handleClick(){
     if(myEvents ===true){
@@ -80,6 +81,7 @@ function loadMyEvents () {
        </div>
      <div className="main d-sm-inline-flex">
        
+       
        <div className="event-div"> 
        {/* passing my events and createdEvents down as props */}
 
@@ -103,6 +105,7 @@ function loadMyEvents () {
        }
        
        </div>
+   
        
      </div>
 

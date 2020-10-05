@@ -1,16 +1,16 @@
-import React, { useState } from "react"; 
+import React  from "react"; 
 import "./style.css";
-import { Container, Media, Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap';
+import { Container } from 'reactstrap';
 import EventsToAttend from "../EventsToAttend";
-import MyEvents from "../../pages/MyEvents";
-// import EventsToAttend from "../EventsToAttend"
+// import MyEvents from "../../pages/MyEvents";
+
 
 
 const MyUpcomingEvents = (props) => {
-
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   
-  const toggle = () => setDropdownOpen(prevState => !prevState);
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
+  
+  // const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
     <Container>
