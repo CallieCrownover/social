@@ -35,7 +35,6 @@ router.get("/api/getAllEvents", (req, res) => {
 
 
 
-=======
 // router.get("/api/getMyEvents", (req, res) => {
 //   console.log("made it to get My Events");
 //   db.Event.findById({_id === participants}, 
@@ -65,8 +64,10 @@ router.post("/api/eventSignUp", (req, res) => {
     function (error, success) {
       if (error) {
         console.log(error);
+        res.end(error)
       } else {
         console.log(success);
+        res.end(success)
       }
     });
 });
@@ -100,7 +101,7 @@ router.get("/api/getMyEvents/:userId", (req, res) => {
   console.log("made it to get My Events");
   console.log(userId);
 
-  db.Event.find().then((allEvents) => { res.json(allEvents)
+  db.Event.find().then((allEvents) => {
     let newArray = allEvents.filter(event => {
       let match = false;
       if (event.participants.indexOf(userId) < 0){
@@ -118,7 +119,7 @@ router.get("/api/getMyEvents/:userId", (req, res) => {
       //   }
       // })
     })
-    console.log(newArray);
+    res.json(newArray);
   });
 });
 

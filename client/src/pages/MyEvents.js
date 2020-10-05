@@ -87,21 +87,12 @@ return (
           {/* passing my events and createdEvents down as props */}
           {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-          {events.map(event => (
+        
             <div className="col-md-4">
               <MyEventsList
-                id={event._id}
-                key={event._id}
-                name={event.eventName}
-                category={event.category}
-                location={event.location}
-                description={event.description}
-                date={event.date}
-                time={event.time}
+                myCreatedEvents={events}
               />
             </div>
-          ))
-          }
 
         </div>
 
