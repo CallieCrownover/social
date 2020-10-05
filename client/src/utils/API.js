@@ -31,7 +31,8 @@ let data ={
   }, 
   
   getMyEvents: function(event) {
-    return axios.get("/api/getMyEvents", event)
+    console.log(event)
+    return axios.get("/api/getMyEvents/" + event)
   }
 }
 

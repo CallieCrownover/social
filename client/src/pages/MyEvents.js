@@ -14,6 +14,8 @@ function MyEvents() {
   const [buttonName , setButtonName] = useState("Go to My Hosted Events")
   const [myCreatedEvents, setMyCreatedEvents]=useState([])
   const [events, setEvents] = useState([]);
+
+  
   useEffect(() => {
     loadMyEvents()
   }, []);
@@ -38,6 +40,15 @@ const testData =[{
   location: "testLocation"
 }] 
 function loadMyEvents () {
+  
+  let userId = sessionStorage.getItem("id");
+
+  const res = API.getMyEvents(userId).then(results=>{
+    console.log(results.data);
+    console.log(res);
+    setEvents(results.data)
+  });
+=======
   setEvents(testData)
   setMyCreatedEvents(testData)
 }
