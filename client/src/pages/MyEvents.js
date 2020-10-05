@@ -21,37 +21,29 @@ function MyEvents() {
   }, []);
 
 // loading events using API call to the database
-// function loadMyEvents () {
-//   const res = API.getMyEvents().then(results=>{
-//     console.log(results.data);
-//     console.log(res);
-//     setEvents(results.data)
-//   });
-// }
-
-// function to test prop drilling without doing API call to the database 
-const testData =[{
-  id :"1",
-  eventName: "test",
-  category: "testCategory",
-  description: "testDescription",
-  date: "October 3, 2020",
-  time: "5:00pm", 
-  location: "testLocation"
-}] 
 function loadMyEvents () {
-  
   let userId = sessionStorage.getItem("id");
-
   const res = API.getMyEvents(userId).then(results=>{
     console.log(results.data);
     console.log(res);
     setEvents(results.data)
   });
-=======
-  setEvents(testData)
-  setMyCreatedEvents(testData)
 }
+
+// function to test prop drilling without doing API call to the database 
+// const testData =[{
+//   id :"1",
+//   eventName: "test",
+//   category: "testCategory",
+//   description: "testDescription",
+//   date: "October 3, 2020",
+//   time: "5:00pm", 
+//   location: "testLocation"
+// }] 
+// function loadMyEvents () {
+//   setEvents(testData)
+//   setMyCreatedEvents(testData)
+// }
 
   function handleClick(){
     if(myEvents ===true){
@@ -82,43 +74,41 @@ function loadMyEvents () {
   //   })
   // }
 
-   return(
+return (
     <div>
-     <Jumbotron className="jumbo" />
-     
-     <div className="button-div rounded">
-       <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
-       </div>
-     <div className="main d-sm-inline-flex">
-       
-       <div className="event-div"> 
-       {/* passing my events and createdEvents down as props */}
+      <Jumbotron className="jumbo" />
+      <NavMenu />
+      <div className="button-div rounded">
+        <MyEventsBtn className="flip-btn-2" handleClick={() => handleClick} buttonName={buttonName} />
+      </div>
+      <div className="main d-sm-inline-flex">
 
-       {myEvents?< MyUpcomingEvents events={events} />: < MyEventsList myCreatedEvents={myCreatedEvents} />
+        <div className="event-div">
+          {/* passing my events and createdEvents down as props */}
+          {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-       /* {events.map(event => ( */
-        //   <div className="col-md-4">
-        //   <MyEventsList
-        //     id={event._id}
-        //     key={event._id}
-        //     name={event.eventName}
-        //     category={event.category}
-        //     location={event.location}
-        //     description={event.description}
-        //     date={event.date}
-        //     time={event.time}
-        //   />
-        //  </div>
-    // ))
+          {events.map(event => (
+            <div className="col-md-4">
+              <MyEventsList
+                id={event._id}
+                key={event._id}
+                name={event.eventName}
+                category={event.category}
+                location={event.location}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+              />
+            </div>
+          ))
+          }
 
-       }
-       
-       </div>
-       
-     </div>
+        </div>
 
-     </div>       
-   )
+      </div>
+
+    </div>
+  )
 }
 
 export default MyEvents;

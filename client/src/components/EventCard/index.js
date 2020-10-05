@@ -1,6 +1,6 @@
 import React from "react"; 
 import {
-    Button, Card, CardBody, CardImg, CardTitle,CardText, Dropdown, Media, DropdownToggle, DropdownMenu, DropdownItem
+    Button, Card, CardBody, CardImg, CardTitle, CardText
   } from "reactstrap";
 import "./style.css";
 import api from "../../utils/API";

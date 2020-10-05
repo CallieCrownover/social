@@ -93,12 +93,13 @@ const EventsToAttend = (props) => {
         <hr></hr>
       </div>
       <div className="media-main" >
-      <div className="media" className="d-flex justify-content-center rounded">
+      <div className="media d-flex justify-content-center rounded">
         
       <Media list>
         <Media tag="li">
           <Media left href="#">
             <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+            {image}
           </Media>
           <Media body>
             <Media heading>
