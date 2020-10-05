@@ -3,7 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import MyEventsList from "../components/MyEventsList";
 import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
-// import NavMenu from "../components/NavBar";
+import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 
 
@@ -14,17 +14,19 @@ function MyEvents() {
   const [buttonName , setButtonName] = useState("Go to My Hosted Events")
   const [myCreatedEvents, setMyCreatedEvents]=useState([])
   const [events, setEvents] = useState([]);
+
+  
   useEffect(() => {
     loadMyEvents()
   }, []);
 
 // loading events using API call to the database
 function loadMyEvents () {
-  const res = API.getMyEvents().then(results=>{
+  let userId = sessionStorage.getItem("id");
+  const res = API.getMyEvents(userId).then(results=>{
     console.log(results.data);
     console.log(res);
     setEvents(results.data)
-    setMyCreatedEvents(results.data)
   });
 }
 
@@ -72,45 +74,41 @@ function loadMyEvents () {
   //   })
   // }
 
-   return(
+return (
     <div>
-     <Jumbotron className="jumbo" />
-     
-     <div className="button-div rounded">
-       <MyEventsBtn className="flip-btn-2" handleClick={()=>handleClick}   buttonName={buttonName}/>
-       </div>
-     <div className="main d-sm-inline-flex">
-       
-       
-       <div className="event-div"> 
-       {/* passing my events and createdEvents down as props */}
+      <Jumbotron className="jumbo" />
+      <NavMenu />
+      <div className="button-div rounded">
+        <MyEventsBtn className="flip-btn-2" handleClick={() => handleClick} buttonName={buttonName} />
+      </div>
+      <div className="main d-sm-inline-flex">
 
-       {myEvents?< MyUpcomingEvents events={events} />: < MyEventsList myCreatedEvents={myCreatedEvents} />
+        <div className="event-div">
+          {/* passing my events and createdEvents down as props */}
+          {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-       /* {events.map(event => ( */
-        //   <div className="col-md-4">
-        //   <MyEventsList
-        //     id={event._id}
-        //     key={event._id}
-        //     name={event.eventName}
-        //     category={event.category}
-        //     location={event.location}
-        //     description={event.description}
-        //     date={event.date}
-        //     time={event.time}
-        //   />
-        //  </div>
-    // ))
+          {events.map(event => (
+            <div className="col-md-4">
+              <MyEventsList
+                id={event._id}
+                key={event._id}
+                name={event.eventName}
+                category={event.category}
+                location={event.location}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+              />
+            </div>
+          ))
+          }
 
-       }
-       
-       </div>
-   
-       
-     </div>
+        </div>
 
-     </div>       
-   )
+      </div>
+
+    </div>
+  )
 }
 
 export default MyEvents;

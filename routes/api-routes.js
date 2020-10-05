@@ -14,8 +14,8 @@ router.post("/api/signup", (req, res) => {
     password: req.body.password,
   })
     .then((response) => {
-        console.log("pineapples and potatoes");
-    //   res.redirect(307, "/api/Events");
+      console.log("pineapples and potatoes");
+      //   res.redirect(307, "/api/Events");
       res.json(response._id);
     })
     .catch((err) => {
@@ -34,6 +34,8 @@ router.get("/api/getAllEvents", (req, res) => {
 });
 
 
+
+=======
 // router.get("/api/getMyEvents", (req, res) => {
 //   console.log("made it to get My Events");
 //   db.Event.findById({_id === participants}, 
@@ -50,6 +52,7 @@ router.get("/api/getAllEvents", (req, res) => {
 // });
 
 
+
 router.post("/api/eventSignUp", (req, res) => {
   const eventId = req.body.eventId;
   let userId = req.body.userId
@@ -58,22 +61,14 @@ router.post("/api/eventSignUp", (req, res) => {
   console.log(eventId)
   console.log("user below")
   console.log(userId)
-db.Event.findOneAndUpdate({_id:eventId},{$push:{participants:userId}},   
-  function (error, success) {
-  if (error) {
-      console.log(error);
-  } else {
-      console.log(success);
-  }
-});
-// db.User.findOneAndUpdate(userId, {$push:{events:eventId}}
-//   function (error, success) {
-//     if (error) {
-//       console.log(error);
-//   } else {
-//       console.log(success);
-//   }
-//   })
+  db.Event.findOneAndUpdate({ _id: eventId }, { $push: { participants: userId } },
+    function (error, success) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(success);
+      }
+    });
 });
 
 router.post("/api/createform", (req, res) => {
@@ -98,24 +93,32 @@ router.post("/api/createform", (req, res) => {
     });
 });
 
-router.get("/api/getMyEvents", (req, res) => {
-  let userId = sessionStorage.getItem("id");
+router.get("/api/getMyEvents/:userId", (req, res) => {
+  console.log("+++++")
+  let userId = req.params.userId;
 
   console.log("made it to get My Events");
   console.log(userId);
 
-  db.Event.find().then((allEvents) => {
+  db.Event.find().then((allEvents) => { res.json(allEvents)
     let newArray = allEvents.filter(event => {
       let match = false;
-      event.participants.map(participant => {
-        if (participant === userId){
-          match=true
-        }
-        if(match === true){
-          return event;
-        }
-      })
+      if (event.participants.indexOf(userId) < 0){
+        return false;
+      } else {
+        return true;
+      }
+      // console.log()
+      // event.participants.map(participant => {
+      //   if (participant === userId) {
+      //     match = true
+      //   }
+      //   if (match === true) {
+      //     return event;
+      //   }
+      // })
     })
+    console.log(newArray);
   });
 });
 
