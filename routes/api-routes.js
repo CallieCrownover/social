@@ -64,10 +64,10 @@ router.post("/api/eventSignUp", (req, res) => {
     function (error, success) {
       if (error) {
         console.log(error);
-        res.end(error)
+        res.send(error)
       } else {
         console.log(success);
-        res.end(success)
+        res.send(success)
       }
     });
 });

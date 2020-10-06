@@ -86,52 +86,55 @@ const MyHostedEvents = (props) => {
   
     return (
       <div className="event-div rounded">
+        
       <Container>
         
-      <div >
-        <h1 className="d-flex justify-content-center host rounded"> My Hosted Events</h1>
-        <hr></hr>
+  <div className="d-flex justify-content-center host rounded">
+  <h1 > My Hosted Events</h1>
+        
       </div>
+      <hr></hr>
       <div className="media-main">
       <div className="media d-flex justify-content-center rounded">
         
       <Media list>
         <Media tag="li">
           <Media left href="#">
-          <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
-            {image}
-          </Media>
+           <div className="myevent-img">
+          <Media object src={image} width="250px" height="200px" />
+          </div>
+            </Media>
+            
+
           <Media body>
             <Media heading>
               {props.name}
             </Media>
-            {props.description}
             <Media>
+              {props.description}
             </Media>
-            {props.location}
             <Media>
+              {props.location}
             </Media>
-            {props.date}
             <Media>
+              {props.date}
             </Media>
-            {props.time}
             <Media>
+              {props.time}
             </Media>
-          </Media>
-        </Media>
-
-        <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
+            <Dropdown isOpen={dropdownOpen} toggle={toggle} className="attending-dropdown">
         <DropdownToggle caret id="navBtn">
           Attendees
           </DropdownToggle>
           <DropdownMenu className="dropdown-menu rounded">
-        <DropdownItem href="">1</DropdownItem>
-          <DropdownItem href="">2</DropdownItem>
-          <DropdownItem href="">3</DropdownItem>
-          <DropdownItem href="">4</DropdownItem>
-          <DropdownItem href="">5</DropdownItem>
+        <DropdownItem href="">{props.participant}</DropdownItem>
+          
          </DropdownMenu>
       </Dropdown>
+          </Media>
+        </Media>
+
+        
       </Media>
       
       </div>

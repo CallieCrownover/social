@@ -1,36 +1,41 @@
 
 .event-div {
-    width: 670px;
+    width: 700px;
     background-color: rgb(213, 229, 248);
-    margin-left: 320px;
+    margin-left: 220px;
     display: flex;
     justify-content: center;
-    padding-right: 130px;
+    padding-right: 220px;
     font-family: 'Quicksand', sans-serif;
 }
 
-.media > li {
-    width: 700px;
-    margin-right: 10px;
+.media {
+    width: 500px;
+    margin-right: 400px;
 }
 
 .d-flex {
-    margin-right: 170px;
+    margin-right: 570px;
 }
 
 .host {
-    width: 390px;
-    padding-right: 20px;
+    width: 900px;
+    padding-right: 540px;
 }
 
-.main {
-    width: 100%;
+.media-list {
+    height: 300px;
+    width: 
+}
+
+.media-main {
+    height: 300px;
 }
 
 .attending-dropdown > button {
     width:120px;
     margin-bottom: 30px;
-    margin-left: 90px;
+    margin-left: 290px;
     background-color: rgb(122, 91, 233);
     color: black;
     font-size: 15px;
@@ -38,4 +43,8 @@
 
 .attending-dropdown > button:hover {
     background-color: rgb(173, 255, 47);
+}
+
+.media-object {
+    margin-right: 40px;
 }

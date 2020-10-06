@@ -1,7 +1,6 @@
 import React from "react"; 
 import CreateEventForm from "../components/CreateEventForm";
 import Jumbotron from "../components/Jumbotron"; 
-import NavMenu from "../components/NavBar";
 import CreateEventImage from "../components/CreateEventImage"
 import CreateEventHeader from "../components/CreateEventHeader"
 
@@ -10,7 +9,7 @@ function CreateEvent() {
     <div>
       <Jumbotron className="jumbo" />
 
-      <NavMenu />
+      
       <div className="container">
       <div className="row">
       <div className="col-md-12">
