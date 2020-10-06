@@ -86,7 +86,7 @@ return (
           {/* passing my events and createdEvents down as props */}
           {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
 
-          {/* {myEvents?<MyUpcomingEvents myEvents={myEvents} />:<MyEventsList createdEvents={myCreatedEvents} />} */}
+         
 
         
             <div className="col-md-4">

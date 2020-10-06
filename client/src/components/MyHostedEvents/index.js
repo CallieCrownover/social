@@ -90,8 +90,7 @@ const MyHostedEvents = (props) => {
       <Container>
         
   <div className="d-flex justify-content-center host rounded">
-  <h1 > My Hosted Events</h1>
-        
+  <h1 >My Hosted Events</h1>
       </div>
       <hr></hr>
       <div className="media-main">
