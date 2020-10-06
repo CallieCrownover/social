@@ -7,7 +7,7 @@ import EventsToAttend from "../EventsToAttend";
 
 
 const MyUpcomingEvents = (props) => {
-  
+  console.log(props);
 
   return (
     <Container>
@@ -23,6 +23,7 @@ const MyUpcomingEvents = (props) => {
           description={event.description}
           date={event.date}
           time={event.time}
+          participant={event.time}
         />
         </div>
       ))}
