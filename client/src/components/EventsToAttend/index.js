@@ -98,24 +98,25 @@ const EventsToAttend = (props) => {
       <Media list>
         <Media tag="li">
           <Media left href="#">
-            <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
-            {image}
+            <Media alt="..."
+            src={image}
+            className="media-img"></Media> 
+            
           </Media>
           <Media body>
             <Media heading>
-              {props.name}
-            </Media>
+              {props.name}</Media>
+              <Media>
            {props.description}
-            <Media>
             </Media>
+            <Media>
             {props.date}
-            <Media>
             </Media>
+            <Media>
             {props.time}
-            <Media>
-            </Media>
+             </Media>
+             <Media>
             {props.location}
-            <Media>
             </Media>
           </Media>
           

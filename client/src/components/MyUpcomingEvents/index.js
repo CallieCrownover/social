@@ -8,9 +8,6 @@ import EventsToAttend from "../EventsToAttend";
 
 const MyUpcomingEvents = (props) => {
   
-  // const [dropdownOpen, setDropdownOpen] = useState(false);
-  
-  // const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
     <Container>
@@ -18,6 +15,7 @@ const MyUpcomingEvents = (props) => {
       {props.events.map(event => (
         <div>
         <EventsToAttend 
+          image={event.image}
           id={event.id}
           name={event.eventName}
           category={event.category}

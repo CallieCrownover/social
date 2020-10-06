@@ -20,6 +20,7 @@ console.log(props)
           description={event.description}
           date={event.date}
           time={event.time}
+          participant={event.participant}
         />
         </div>
         ))}

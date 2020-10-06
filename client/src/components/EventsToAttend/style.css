@@ -5,6 +5,12 @@
     display: flex;
     justify-content: center;
     padding-right: 150px;
+    margin-right: 200px;
+}
+
+.container {
+    width: 1000px;
+    margin-right: 100px;
 }
 
 .media-main > li {
@@ -19,6 +25,9 @@
 .d-flex {
     margin-right: 170px;
 }
+
+
+
 
 .attend {
     width: 390px;

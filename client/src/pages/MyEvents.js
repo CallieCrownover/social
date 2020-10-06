@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from "../components/Jumbotron"; 
 import MyEventsList from "../components/MyEventsList";
-import MyUpcomingEvents from "../components/MyUpcomingEvents";
+// import MyUpcomingEvents from "../components/MyUpcomingEvents";
 import MyEventsBtn from "../components/MyEventsBtn";
-import NavMenu from "../components/NavBar";
 import API from "../utils/API";
 
 
@@ -77,7 +76,7 @@ function loadMyEvents () {
 return (
     <div>
       <Jumbotron className="jumbo" />
-      <NavMenu />
+     
       <div className="button-div rounded">
         <MyEventsBtn className="flip-btn-2" handleClick={() => handleClick} buttonName={buttonName} />
       </div>
@@ -86,6 +85,8 @@ return (
         <div className="event-div">
           {/* passing my events and createdEvents down as props */}
           {/* {myEvents?< MyUpcomingEvents myEvents={myEvents} />: */}
+
+          {/* {myEvents?<MyUpcomingEvents myEvents={myEvents} />:<MyEventsList createdEvents={myCreatedEvents} />} */}
 
         
             <div className="col-md-4">
